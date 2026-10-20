@@ -3,6 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { meetingDocumentService } from '@/features/requirements/services/meeting-document-service';
 import { requirementIntelligenceEngine } from '@/features/requirements/services/requirement-intelligence';
+import { getProjectsDir } from '@/lib/storage/data-dir';
 
 /**
  * POST /api/meetings/[meetingId]/reanalyze
@@ -32,10 +33,10 @@ export async function POST(
     try {
       const cleanId = meetingId.replace(/^meeting-/, '');
       const intelPath = path.join(
-        process.cwd(), 'data', 'projects', projectId, 'meetings',
+        getProjectsDir(), projectId, 'meetings',
         `meeting-${cleanId}-intelligence.json`
       );
-      freshState = JSON.parse(await fs.readFile(intelPath, 'utf-8'));
+      freshState = JSON.parse(await fs.readFile(/*turbopackIgnore: true*/ intelPath, 'utf-8'));
       reqCount = (freshState.candidateRequirements || []).length;
     } catch {}
 

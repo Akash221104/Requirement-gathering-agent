@@ -128,12 +128,12 @@
   ],
   "clarificationQuestions": [
     {
-      "id": "CQ-5VHZ-1",
+      "id": "CQ-T5GJ-1",
       "question": "What product filters (e.g. price range, size, color, brand) and sorting criteria should be enabled in clothing categories?",
       "rationale": "Required to build the catalog database indexing and UI filter sidebar.",
       "suggestedTo": "REQUIREMENT_ENGINEER",
-      "timestamp": "2026-10-20T11:42:26.997Z"
+      "timestamp": "2026-10-20T15:16:30.306Z"
     }
   ],
-  "lastUpdated": "2026-10-20T11:42:27.033Z"
+  "lastUpdated": "2026-10-20T15:16:30.349Z"
 }

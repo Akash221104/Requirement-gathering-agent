@@ -7,12 +7,11 @@ import type {
   RequirementQualityIssue,
 } from '@/types/requirement';
 import type { IIntelligenceStore } from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'projects');
+import { getProjectsDir } from './data-dir';
 
 export class FileIntelligenceStore implements IIntelligenceStore {
   private getMeetingDirPath(projectId: string): string {
-    return path.join(DATA_DIR, projectId, 'meetings');
+    return path.join(getProjectsDir(), projectId, 'meetings');
   }
 
   private getIntelligenceFilePath(projectId: string, meetingId: string): string {
@@ -28,17 +27,18 @@ export class FileIntelligenceStore implements IIntelligenceStore {
   ): Promise<MeetingIntelligenceState | null> {
     const specificPath = this.getIntelligenceFilePath(projectId, meetingId);
     try {
-      const content = await fs.readFile(specificPath, 'utf-8');
+      const content = await fs.readFile(/*turbopackIgnore: true*/ specificPath, 'utf-8');
       return JSON.parse(content) as MeetingIntelligenceState;
     } catch {
       // Fallback search across all projects if needed
       try {
-        await fs.mkdir(DATA_DIR, { recursive: true });
-        const projects = await fs.readdir(DATA_DIR);
+        const projectsDir = getProjectsDir();
+        await fs.mkdir(projectsDir, { recursive: true });
+        const projects = await fs.readdir(projectsDir);
         for (const proj of projects) {
           const candidatePath = this.getIntelligenceFilePath(proj, meetingId);
           try {
-            const content = await fs.readFile(candidatePath, 'utf-8');
+            const content = await fs.readFile(/*turbopackIgnore: true*/ candidatePath, 'utf-8');
             return JSON.parse(content) as MeetingIntelligenceState;
           } catch {
             continue;

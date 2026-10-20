@@ -5,6 +5,7 @@ import { requirementVersionService } from '@/features/requirements/services/requ
 import { meetingStore } from '@/lib/storage/meeting-store';
 import { calendarStore } from '@/lib/storage/calendar-store';
 import { decisionStore } from '@/lib/storage/decision-store';
+import { getProjectsDir } from '@/lib/storage/data-dir';
 import type { RequirementQualityIssue, ClarificationQuestion, CandidateRequirement } from '@/types/requirement';
 
 export async function GET(
@@ -32,7 +33,7 @@ export async function GET(
     );
 
     // 4. Gather intelligence, candidate requirements, quality issues, and follow-up questions
-    const meetingsDir = path.join(process.cwd(), 'data', 'projects', cleanProjectId, 'meetings');
+    const meetingsDir = path.join(getProjectsDir(), cleanProjectId, 'meetings');
     let allIssues: RequirementQualityIssue[] = [];
     let allQuestions: ClarificationQuestion[] = [];
     let allCandidates: CandidateRequirement[] = [];
@@ -42,7 +43,7 @@ export async function GET(
       for (const file of files) {
         if (file.endsWith('-intelligence.json')) {
           try {
-            const raw = await fs.readFile(path.join(meetingsDir, file), 'utf-8');
+            const raw = await fs.readFile(/*turbopackIgnore: true*/ path.join(meetingsDir, file), 'utf-8');
             const data = JSON.parse(raw);
             if (Array.isArray(data.issues)) allIssues.push(...data.issues);
             if (Array.isArray(data.clarificationQuestions)) allQuestions.push(...data.clarificationQuestions);

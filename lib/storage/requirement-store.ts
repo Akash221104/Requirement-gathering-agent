@@ -2,12 +2,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { Requirement, RequirementVersion, ChangeProposal } from '@/types/requirement';
 import type { IRequirementStore } from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'projects');
+import { getProjectsDir } from './data-dir';
 
 export class FileRequirementStore implements IRequirementStore {
   private getProjectDir(projectId: string): string {
-    return path.join(DATA_DIR, projectId);
+    return path.join(getProjectsDir(), projectId);
   }
 
   private getRequirementsPath(projectId: string): string {
@@ -21,7 +20,7 @@ export class FileRequirementStore implements IRequirementStore {
   async getRequirements(projectId: string = 'project-001'): Promise<Requirement[]> {
     try {
       const filePath = this.getRequirementsPath(projectId);
-      const content = await fs.readFile(filePath, 'utf-8');
+      const content = await fs.readFile(/*turbopackIgnore: true*/ filePath, 'utf-8');
       const data = JSON.parse(content);
       return Array.isArray(data) ? (data as Requirement[]) : [];
     } catch {
@@ -58,7 +57,7 @@ export class FileRequirementStore implements IRequirementStore {
   async getVersions(requirementId: string, projectId: string = 'project-001'): Promise<RequirementVersion[]> {
     try {
       const filePath = path.join(this.getProjectDir(projectId), `req-${requirementId}-versions.json`);
-      const content = await fs.readFile(filePath, 'utf-8');
+      const content = await fs.readFile(/*turbopackIgnore: true*/ filePath, 'utf-8');
       return JSON.parse(content) as RequirementVersion[];
     } catch {
       return [];
@@ -76,7 +75,7 @@ export class FileRequirementStore implements IRequirementStore {
 
   async getChangeProposals(projectId: string = 'project-001'): Promise<ChangeProposal[]> {
     try {
-      const content = await fs.readFile(this.getChangesPath(projectId), 'utf-8');
+      const content = await fs.readFile(/*turbopackIgnore: true*/ this.getChangesPath(projectId), 'utf-8');
       return JSON.parse(content) as ChangeProposal[];
     } catch {
       return [];

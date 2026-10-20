@@ -2,12 +2,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { Meeting } from '@/types/meeting';
 import type { IMeetingStore } from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'projects');
+import { getProjectsDir } from './data-dir';
 
 export class FileMeetingStore implements IMeetingStore {
   private getMeetingDirPath(projectId: string): string {
-    return path.join(DATA_DIR, projectId, 'meetings');
+    return path.join(getProjectsDir(), projectId, 'meetings');
   }
 
   private getMeetingFilePath(projectId: string, meetingId: string): string {
@@ -62,7 +61,7 @@ export class FileMeetingStore implements IMeetingStore {
 
     for (const p of candidates) {
       try {
-        const content = await fs.readFile(p, 'utf-8');
+        const content = await fs.readFile(/*turbopackIgnore: true*/ p, 'utf-8');
         return JSON.parse(content) as Meeting;
       } catch {
         // try next
@@ -71,16 +70,17 @@ export class FileMeetingStore implements IMeetingStore {
 
     // Search across all projects if not found in primary
     try {
-      await fs.mkdir(DATA_DIR, { recursive: true });
-      const projects = await fs.readdir(DATA_DIR);
+      const projectsDir = getProjectsDir();
+      await fs.mkdir(projectsDir, { recursive: true });
+      const projects = await fs.readdir(projectsDir);
       for (const proj of projects) {
         const projCandidates = [
-          path.join(DATA_DIR, proj, 'meetings', `${cleanId}.json`),
-          path.join(DATA_DIR, proj, 'meetings', `meeting-${cleanId}.json`),
+          path.join(projectsDir, proj, 'meetings', `${cleanId}.json`),
+          path.join(projectsDir, proj, 'meetings', `meeting-${cleanId}.json`),
         ];
         for (const p of projCandidates) {
           try {
-            const content = await fs.readFile(p, 'utf-8');
+            const content = await fs.readFile(/*turbopackIgnore: true*/ p, 'utf-8');
             return JSON.parse(content) as Meeting;
           } catch {
             continue;
@@ -142,8 +142,8 @@ export class FileMeetingStore implements IMeetingStore {
 
     // Also remove document subfolder
     try {
-      const docFolder1 = path.join(process.cwd(), 'data', 'projects', projectId, 'documents', cleanId);
-      const docFolder2 = path.join(process.cwd(), 'data', 'projects', projectId, 'documents', `meeting-${cleanId}`);
+      const docFolder1 = path.join(getProjectsDir(), projectId, 'documents', cleanId);
+      const docFolder2 = path.join(getProjectsDir(), projectId, 'documents', `meeting-${cleanId}`);
       await fs.rm(docFolder1, { recursive: true, force: true });
       await fs.rm(docFolder2, { recursive: true, force: true });
     } catch {}

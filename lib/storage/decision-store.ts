@@ -1,9 +1,10 @@
 import fs from 'fs/promises';
 import path from 'path';
 import type { RequirementDecisionItem, RequirementChangeItem, MeetingDocumentBundle } from '@/types/documentation';
+import { getProjectsDir } from './data-dir';
 
 function getMeetingsDir(projectId: string = 'project-001'): string {
-  return path.join(process.cwd(), 'data', 'projects', projectId, 'meetings');
+  return path.join(getProjectsDir(), projectId, 'meetings');
 }
 
 export class DecisionStore {
@@ -23,7 +24,7 @@ export class DecisionStore {
   public async getDecisions(meetingId: string, projectId: string = 'project-001'): Promise<RequirementDecisionItem[]> {
     const filePath = path.join(getMeetingsDir(projectId), `meeting-${meetingId}-decisions.json`);
     try {
-      const data = await fs.readFile(filePath, 'utf-8');
+      const data = await fs.readFile(/*turbopackIgnore: true*/ filePath, 'utf-8');
       return JSON.parse(data);
     } catch {
       return [];
@@ -46,7 +47,7 @@ export class DecisionStore {
   public async getChanges(meetingId: string, projectId: string = 'project-001'): Promise<RequirementChangeItem[]> {
     const filePath = path.join(getMeetingsDir(projectId), `meeting-${meetingId}-changes.json`);
     try {
-      const data = await fs.readFile(filePath, 'utf-8');
+      const data = await fs.readFile(/*turbopackIgnore: true*/ filePath, 'utf-8');
       return JSON.parse(data);
     } catch {
       return [];
@@ -81,7 +82,7 @@ export class DecisionStore {
   public async getSummary(meetingId: string, projectId: string = 'project-001'): Promise<MeetingDocumentBundle | null> {
     const filePath = path.join(getMeetingsDir(projectId), `meeting-${meetingId}-summary.json`);
     try {
-      const data = await fs.readFile(filePath, 'utf-8');
+      const data = await fs.readFile(/*turbopackIgnore: true*/ filePath, 'utf-8');
       return JSON.parse(data);
     } catch {
       return null;

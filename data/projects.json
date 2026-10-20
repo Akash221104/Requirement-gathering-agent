@@ -1,5 +1,17 @@
 [
   {
+    "id": "proj-mvgugjwr-cbt7",
+    "name": "ecommerce website",
+    "clientName": "xyz",
+    "clientContact": "6489",
+    "clientEmail": "xyz@gmail.com",
+    "description": "sdf",
+    "status": "DISCOVERY",
+    "currentVersion": "v1.0-Draft",
+    "createdAt": "2026-10-20T15:34:42.123Z",
+    "updatedAt": "2026-10-20T15:34:42.123Z"
+  },
+  {
     "id": "proj-mvgszhvl-mru2",
     "name": "ecomerce website",
     "clientName": "xyz",

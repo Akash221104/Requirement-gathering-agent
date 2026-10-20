@@ -18,6 +18,7 @@ import { decisionStore } from '@/lib/storage/decision-store';
 import { requirementVersionService } from './requirement-version-service';
 import { intelligenceStore } from '@/lib/storage/intelligence-store';
 import { documentStore } from '@/lib/storage/document-store';
+import { getProjectsDir } from '@/lib/storage/data-dir';
 
 export interface MeetingKnowledgeSummary {
   meetingId: string;
@@ -83,8 +84,8 @@ export class ProjectKnowledgeService {
     let projectDescription = 'Continuous living requirement elicitation and architecture discovery.';
 
     try {
-      const projPath = path.join(process.cwd(), 'data', 'projects', cleanProjectId, 'project.json');
-      const raw = await fs.readFile(projPath, 'utf-8');
+      const projPath = path.join(getProjectsDir(), cleanProjectId, 'project.json');
+      const raw = await fs.readFile(/*turbopackIgnore: true*/ projPath, 'utf-8');
       const p = JSON.parse(raw);
       projectName = p.name || projectName;
       clientName = p.clientName || clientName;

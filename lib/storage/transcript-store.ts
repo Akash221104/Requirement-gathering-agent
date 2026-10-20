@@ -2,12 +2,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { MeetingTranscriptData, TranscriptSegment } from '@/types/meeting';
 import type { ITranscriptStore } from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'projects');
+import { getProjectsDir } from './data-dir';
 
 export class FileTranscriptStore implements ITranscriptStore {
   private getMeetingDirPath(projectId: string): string {
-    return path.join(DATA_DIR, projectId, 'meetings');
+    return path.join(getProjectsDir(), projectId, 'meetings');
   }
 
   private getTranscriptFilePath(projectId: string, meetingId: string): string {
@@ -20,17 +19,18 @@ export class FileTranscriptStore implements ITranscriptStore {
   async getTranscript(meetingId: string, projectId: string = 'project-001'): Promise<MeetingTranscriptData | null> {
     const specificPath = this.getTranscriptFilePath(projectId, meetingId);
     try {
-      const content = await fs.readFile(specificPath, 'utf-8');
+      const content = await fs.readFile(/*turbopackIgnore: true*/ specificPath, 'utf-8');
       return JSON.parse(content) as MeetingTranscriptData;
     } catch {
       // Fallback search across all projects if needed
       try {
-        await fs.mkdir(DATA_DIR, { recursive: true });
-        const projects = await fs.readdir(DATA_DIR);
+        const projectsDir = getProjectsDir();
+        await fs.mkdir(projectsDir, { recursive: true });
+        const projects = await fs.readdir(projectsDir);
         for (const proj of projects) {
-          const candidatePath = path.join(DATA_DIR, proj, 'meetings', `meeting-${meetingId}-transcript.json`);
+          const candidatePath = path.join(projectsDir, proj, 'meetings', `meeting-${meetingId}-transcript.json`);
           try {
-            const content = await fs.readFile(candidatePath, 'utf-8');
+            const content = await fs.readFile(/*turbopackIgnore: true*/ candidatePath, 'utf-8');
             return JSON.parse(content) as MeetingTranscriptData;
           } catch {
             continue;

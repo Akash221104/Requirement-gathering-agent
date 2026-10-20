@@ -25,6 +25,7 @@ import { postMeetingDocumentationEngine } from './post-meeting-documentation-eng
 import { requirementVersionService } from './requirement-version-service';
 import { transcriptSynthesizer } from './transcript-synthesizer';
 import { requirementIntelligenceEngine } from './requirement-intelligence';
+import { getProjectsDir } from '@/lib/storage/data-dir';
 
 export class MeetingDocumentService {
   /**
@@ -73,14 +74,12 @@ export class MeetingDocumentService {
           segments = persisted.segments;
         } else {
           const transcriptPath = path.join(
-            process.cwd(),
-            'data',
-            'projects',
+            getProjectsDir(),
             projectId,
             'meetings',
             `meeting-${cleanId}-transcript.json`
           );
-          const data = await fs.readFile(transcriptPath, 'utf-8');
+          const data = await fs.readFile(/*turbopackIgnore: true*/ transcriptPath, 'utf-8');
           const parsed = JSON.parse(data);
           segments = Array.isArray(parsed) ? parsed : (parsed.segments || []);
         }
@@ -94,9 +93,7 @@ export class MeetingDocumentService {
     let issues: RequirementQualityIssue[] = [];
 
     const intelPath = path.join(
-      process.cwd(),
-      'data',
-      'projects',
+      getProjectsDir(),
       projectId,
       'meetings',
       `meeting-${cleanId}-intelligence.json`
@@ -104,7 +101,7 @@ export class MeetingDocumentService {
 
     let savedIntel: any = null;
     try {
-      const data = await fs.readFile(intelPath, 'utf-8');
+      const data = await fs.readFile(/*turbopackIgnore: true*/ intelPath, 'utf-8');
       savedIntel = JSON.parse(data);
       candidateRequirements = savedIntel.candidateRequirements || [];
       issues = savedIntel.issues || [];
@@ -279,9 +276,7 @@ export class MeetingDocumentService {
 
     const cleanId = meetingId.replace(/^meeting-/, '');
     const intelPath = path.join(
-      process.cwd(),
-      'data',
-      'projects',
+      getProjectsDir(),
       projectId,
       'meetings',
       `meeting-${cleanId}-intelligence.json`
@@ -290,7 +285,7 @@ export class MeetingDocumentService {
     let candidates: CandidateRequirement[] = [];
     let fullIntel: any = null;
     try {
-      const data = await fs.readFile(intelPath, 'utf-8');
+      const data = await fs.readFile(/*turbopackIgnore: true*/ intelPath, 'utf-8');
       fullIntel = JSON.parse(data);
       candidates = fullIntel.candidateRequirements || [];
     } catch {}

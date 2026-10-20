@@ -1,0 +1,347 @@
+{
+  "meetingId": "meeting-mvguh70g-dq98",
+  "projectId": "proj-mvgugjwr-cbt7",
+  "segments": [
+    {
+      "id": "seg-mvguhir2-6wvb",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Hi, I'm SpecPilot. I'll help us discover and define today's requirements for Business Model & Target Audience. To start off, could you tell me about the primary purpose of your project and who will be using it?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:35:27.277Z"
+    },
+    {
+      "id": "seg-mvguhxh0-2i3r",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Hello? So we are planning to build an ecommerce application called QuickCart.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:35:46.356Z"
+    },
+    {
+      "id": "seg-mvguhzz4-solc",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "It mainly for, like, online shopping.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:35:49.600Z"
+    },
+    {
+      "id": "seg-mvgui0pb-15ou",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Okay.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:35:50.543Z"
+    },
+    {
+      "id": "seg-mvgui15z-mryw",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Great!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:35:51.143Z"
+    },
+    {
+      "id": "seg-mvgui1mk-ceuv",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "QuickCart sounds like an exciting project for online shopping.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:35:51.740Z"
+    },
+    {
+      "id": "seg-mvgui44l-d4kg",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Could you share more about the target audience you're aiming to reach with this application?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:35:54.981Z"
+    },
+    {
+      "id": "seg-mvguiaq8-o1ed",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "So customer should be able to create an account",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:03.536Z"
+    },
+    {
+      "id": "seg-mvguic1n-8buk",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "browse groceries,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:05.243Z"
+    },
+    {
+      "id": "seg-mvguii1b-6p62",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "search for products, and add them to the cart. Then they should be able to place an order and get it delivered to their home.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:13.006Z"
+    },
+    {
+      "id": "seg-mvguii87-qkr5",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "That’s a solid foundation!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:13.255Z"
+    },
+    {
+      "id": "seg-mvguikbr-ejvc",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "To confirm, your key requirements are user account creation, product browsing and searching, cart functionality, and home delivery for orders.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:15.975Z"
+    },
+    {
+      "id": "seg-mvguiq8v-0c4b",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Do you have any specific features in mind for the user experience, like order tracking or payment options?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:23.647Z"
+    },
+    {
+      "id": "seg-mvguiyf5-r8mz",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "So initially, grass is like fruit.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:34.241Z"
+    },
+    {
+      "id": "seg-mvguj4x7-lry8",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Vegetable, dairy products, snacks, and household item. Each should have an image, name, price, description, and availability.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:42.665Z"
+    },
+    {
+      "id": "seg-mvguj5ff-4cut",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Got it!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:43.323Z"
+    },
+    {
+      "id": "seg-mvguj5zg-w7e6",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "You want to categorize the products into fruits, vegetables, dairy, snacks, and household items, with each item displaying an image, name, price, description, and availability.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:44.044Z"
+    },
+    {
+      "id": "seg-mvgujhtt-ez9w",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Also, we want to search for the product. They should be able to filter them by category and price.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:36:59.393Z"
+    },
+    {
+      "id": "seg-mvgujif5-rvye",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Understood!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:00.161Z"
+    },
+    {
+      "id": "seg-mvgujjch-7078",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "You'll need a search feature that allows users to filter products by category and price.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:01.361Z"
+    },
+    {
+      "id": "seg-mvgujn96-8ggr",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "That’s a great addition for enhancing the shopping experience!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:06.426Z"
+    },
+    {
+      "id": "seg-mvgujpt1-go91",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Is there anything specific you'd like to include in the checkout process?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:09.733Z"
+    },
+    {
+      "id": "seg-mvgujx35-65jd",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "We want to support UPI credit card and cash on delivery feature.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:19.169Z"
+    },
+    {
+      "id": "seg-mvgujxot-3t5u",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Perfect!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:19.949Z"
+    },
+    {
+      "id": "seg-mvgujyb1-j9bk",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "So, you'll support UPI, credit card payments, and cash on delivery during the checkout process.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:20.749Z"
+    },
+    {
+      "id": "seg-mvguk2s7-xwa2",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "That provides flexibility for your customers.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:26.551Z"
+    },
+    {
+      "id": "seg-mvguk4vq-3eaj",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Do you have any preferences for user authentication, like using Google SSO or mobile OTP?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:29.269Z"
+    },
+    {
+      "id": "seg-mvguk6hr-nb1p",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Yeah.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:31.359Z"
+    },
+    {
+      "id": "seg-mvguk99o-mjpc",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "So for today, we will end this meeting",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:34.956Z"
+    },
+    {
+      "id": "seg-mvgukaae-j2nu",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Before we wrap up, do you have any specific ideas about how you'd like the product catalog to be organized or displayed?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:36.278Z"
+    },
+    {
+      "id": "seg-mvgukdur-7kip",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "customer_mvguhcwc_i3rr",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "The next meeting on Sunday.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:40.898Z"
+    },
+    {
+      "id": "seg-mvgukeaq-fdg1",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Sounds great!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:41.474Z"
+    },
+    {
+      "id": "seg-mvgukf1g-d7dd",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "I look forward to our meeting on Sunday.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:42.436Z"
+    },
+    {
+      "id": "seg-mvgukgpa-9ez3",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "If you think of any additional requirements or questions in the meantime, feel free to jot them down!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:37:44.590Z"
+    }
+  ],
+  "lastUpdated": "2026-10-20T15:37:44.611Z"
+}

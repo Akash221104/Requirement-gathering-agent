@@ -691,7 +691,17 @@
       "text": "Have a great day, and I'll see you next Sunday!",
       "isFinal": true,
       "timestamp": "2026-10-20T07:33:32.149Z"
+    },
+    {
+      "id": "seg-mvgtt4cu-2gvc",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "We've reached our time limit for today. I have captured the current requirements and the remaining points will be marked for engineer review.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:16:28.877Z"
     }
   ],
-  "lastUpdated": "2026-10-20T07:33:32.205Z"
+  "lastUpdated": "2026-10-20T15:16:28.890Z"
 }

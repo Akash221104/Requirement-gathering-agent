@@ -2,13 +2,15 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { CalendarEvent } from '@/types/calendar';
 import { CalendarEventSchema } from '@/types/calendar';
+import { getCalendarDir } from './data-dir';
 
-const CALENDAR_DIR = path.join(process.cwd(), 'data', 'calendar');
-const EVENTS_FILE = path.join(CALENDAR_DIR, 'events.json');
+function getEventsFilePath(): string {
+  return path.join(getCalendarDir(), 'events.json');
+}
 
 async function ensureCalendarDir(): Promise<void> {
   try {
-    await fs.mkdir(CALENDAR_DIR, { recursive: true });
+    await fs.mkdir(getCalendarDir(), { recursive: true });
   } catch {
     // Already exists
   }
@@ -21,7 +23,7 @@ export class CalendarStore {
   public async getEvents(): Promise<CalendarEvent[]> {
     await ensureCalendarDir();
     try {
-      const data = await fs.readFile(EVENTS_FILE, 'utf-8');
+      const data = await fs.readFile(/*turbopackIgnore: true*/ getEventsFilePath(), 'utf-8');
       const parsed = JSON.parse(data);
       if (Array.isArray(parsed)) {
         return parsed.sort((a, b) => {
@@ -58,6 +60,7 @@ export class CalendarStore {
   public async createEvent(eventData: Omit<CalendarEvent, 'id' | 'createdAt' | 'updatedAt'> & { id?: string }): Promise<CalendarEvent> {
     await ensureCalendarDir();
     const events = await this.getEvents();
+    const eventsFile = getEventsFilePath();
 
     const now = new Date().toISOString();
 
@@ -78,7 +81,7 @@ export class CalendarStore {
       };
       CalendarEventSchema.parse(updated);
       events[existingIndex] = updated;
-      await fs.writeFile(EVENTS_FILE, JSON.stringify(events, null, 2), 'utf-8');
+      await fs.writeFile(eventsFile, JSON.stringify(events, null, 2), 'utf-8');
       return updated;
     }
 
@@ -100,7 +103,7 @@ export class CalendarStore {
     CalendarEventSchema.parse(newEvent);
 
     events.push(newEvent);
-    await fs.writeFile(EVENTS_FILE, JSON.stringify(events, null, 2), 'utf-8');
+    await fs.writeFile(eventsFile, JSON.stringify(events, null, 2), 'utf-8');
     return newEvent;
   }
 
@@ -123,7 +126,7 @@ export class CalendarStore {
     CalendarEventSchema.parse(updated);
     events[index] = updated;
 
-    await fs.writeFile(EVENTS_FILE, JSON.stringify(events, null, 2), 'utf-8');
+    await fs.writeFile(getEventsFilePath(), JSON.stringify(events, null, 2), 'utf-8');
     return updated;
   }
 
@@ -136,7 +139,7 @@ export class CalendarStore {
     const filtered = events.filter((e) => e.id !== id);
     if (filtered.length === events.length) return false;
 
-    await fs.writeFile(EVENTS_FILE, JSON.stringify(filtered, null, 2), 'utf-8');
+    await fs.writeFile(getEventsFilePath(), JSON.stringify(filtered, null, 2), 'utf-8');
     return true;
   }
 }

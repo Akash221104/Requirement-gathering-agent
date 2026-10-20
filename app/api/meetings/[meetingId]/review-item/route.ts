@@ -4,6 +4,7 @@ import path from 'path';
 import type { CandidateRequirement, CandidateRequirementStatus, CandidateRequirementType } from '@/types/requirement';
 import { requirementVersionService } from '@/features/requirements/services/requirement-version-service';
 import { documentStore } from '@/lib/storage/document-store';
+import { getProjectsDir } from '@/lib/storage/data-dir';
 
 export async function PATCH(
   req: NextRequest,
@@ -16,9 +17,7 @@ export async function PATCH(
 
     const cleanId = meetingId.replace(/^meeting-/, '');
     const intelPath = path.join(
-      process.cwd(),
-      'data',
-      'projects',
+      getProjectsDir(),
       projectId,
       'meetings',
       `meeting-${cleanId}-intelligence.json`

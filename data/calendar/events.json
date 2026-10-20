@@ -1,6 +1,6 @@
 [
   {
-    "meetingId": "meeting-followup-mvgm5ycg",
+    "meetingId": "meeting-followup-mvgtt5k1",
     "linkedMeetingId": "meeting-mvgd32au-bs3f",
     "projectId": "proj-mvgd0dpa-nmg2",
     "title": "Follow-Up Requirement Discovery (Next Sunday)",
@@ -19,6 +19,28 @@
     "status": "SCHEDULED",
     "id": "cal-mvgg4rid-v60a",
     "createdAt": "2026-10-20T08:53:37.477Z",
-    "updatedAt": "2026-10-20T11:42:30.693Z"
+    "updatedAt": "2026-10-20T15:16:30.458Z"
+  },
+  {
+    "meetingId": "meeting-followup-mvgukmpg",
+    "linkedMeetingId": "meeting-mvguh70g-dq98",
+    "projectId": "proj-mvgugjwr-cbt7",
+    "title": "Follow-Up Requirement Discovery (Next Sunday)",
+    "description": "Continue requirement elicitation session on clothing catalog filtering, search, and checkout workflow",
+    "date": "2026-10-25",
+    "startTime": "10:00",
+    "endTime": "10:45",
+    "timezone": "UTC",
+    "meetingMode": "autonomous",
+    "agenda": [
+      "Review and approve Google SSO login flow",
+      "Specify product sorting & filtering criteria (size, price, brand)",
+      "Define shopping cart and payment gateway requirements"
+    ],
+    "participants": [],
+    "status": "SCHEDULED",
+    "id": "cal-mvgukmpk-0ilj",
+    "createdAt": "2026-10-20T15:37:52.376Z",
+    "updatedAt": "2026-10-20T15:37:52.376Z"
   }
 ]

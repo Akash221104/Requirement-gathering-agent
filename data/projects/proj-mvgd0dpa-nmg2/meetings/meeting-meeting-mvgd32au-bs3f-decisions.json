@@ -1,29 +1,29 @@
 [
   {
-    "id": "DEC-5VHY-1",
+    "id": "DEC-T5GJ-1",
     "meetingId": "meeting-mvgd32au-bs3f",
     "topic": "Business Model & Product Catalog Scope",
     "decision": "Transition from offline retail to online e-commerce platform selling multi-season clothing collections.",
     "confirmedBy": "Customer Stakeholder",
-    "timestamp": "2026-10-20T11:42:26.997Z",
+    "timestamp": "2026-10-20T15:16:30.306Z",
     "status": "PENDING_APPROVAL"
   },
   {
-    "id": "DEC-5VHY-2",
+    "id": "DEC-T5GJ-2",
     "meetingId": "meeting-mvgd32au-bs3f",
     "topic": "Authentication Architecture",
     "decision": "Primary authentication provider will be Google Account Single Sign-On.",
     "confirmedBy": "Customer Stakeholder",
-    "timestamp": "2026-10-20T11:42:26.997Z",
+    "timestamp": "2026-10-20T15:16:30.306Z",
     "status": "PENDING_APPROVAL"
   },
   {
-    "id": "DEC-5VHY-3",
+    "id": "DEC-T5GJ-3",
     "meetingId": "meeting-mvgd32au-bs3f",
     "topic": "Guest vs Authenticated User Journey",
     "decision": "Public catalog browsing permitted for unauthenticated guests; Login required only upon Like / Buy actions.",
     "confirmedBy": "Customer Stakeholder",
-    "timestamp": "2026-10-20T11:42:26.997Z",
+    "timestamp": "2026-10-20T15:16:30.306Z",
     "status": "PENDING_APPROVAL"
   }
 ]

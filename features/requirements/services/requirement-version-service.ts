@@ -2,9 +2,10 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { Requirement, RequirementCategory } from '@/types/requirement';
 import type { RequirementBaselineVersion, RequirementChangeItem, MeetingDocumentBundle } from '@/types/documentation';
+import { getProjectsDir } from '@/lib/storage/data-dir';
 
 function getProjectDir(projectId: string = 'project-001'): string {
-  return path.join(process.cwd(), 'data', 'projects', projectId);
+  return path.join(/*turbopackIgnore: true*/ getProjectsDir(), projectId);
 }
 
 function getVersionsDir(projectId: string = 'project-001'): string {

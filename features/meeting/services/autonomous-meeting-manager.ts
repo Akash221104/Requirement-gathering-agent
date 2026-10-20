@@ -12,12 +12,13 @@ import type { CandidateRequirement, RequirementQualityIssue } from '@/types/requ
 import type { RequirementDecisionItem, RequirementChangeItem } from '@/types/documentation';
 import { requirementVersionService } from '@/features/requirements/services/requirement-version-service';
 import { postMeetingDocumentationEngine } from '@/features/requirements/services/post-meeting-documentation-engine';
+import { getProjectsDir } from '@/lib/storage/data-dir';
 
 export const MAX_AUTONOMOUS_TURNS = 30;
 export const MAX_CLARIFICATIONS_PER_TOPIC = 3;
 
 function getContextPath(projectId: string, meetingId: string): string {
-  return path.join(process.cwd(), 'data', 'projects', projectId, 'meetings', `meeting-${meetingId}-autonomous.json`);
+  return path.join(getProjectsDir(), projectId, 'meetings', `meeting-${meetingId}-autonomous.json`);
 }
 
 export class AutonomousMeetingManager {

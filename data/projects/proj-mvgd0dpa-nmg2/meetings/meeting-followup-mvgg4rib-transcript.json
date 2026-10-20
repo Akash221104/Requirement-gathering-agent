@@ -1,0 +1,17 @@
+{
+  "meetingId": "meeting-followup-mvgg4rib",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "segments": [
+    {
+      "id": "seg-mvgttdpk-zpao",
+      "meetingId": "meeting-followup-mvgg4rib",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Hi, I'm SpecPilot. Welcome back! In our previous session we discussed Follow-Up Requirement Discovery (Next Sunday). Today, let's dive into The application shall support Google Sin. To start, could you describe how you'd like this to work?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:16:41.000Z"
+    }
+  ],
+  "lastUpdated": "2026-10-20T15:16:41.018Z"
+}

@@ -1,17 +1,18 @@
 import fs from 'fs/promises';
 import path from 'path';
 import type { MeetingDocumentBundle } from '@/types/documentation';
+import { getProjectsDir } from './data-dir';
 
 function getCleanMeetingId(id: string): string {
   return id.replace(/^meeting-/, '');
 }
 
 function getDocumentsDir(projectId: string, meetingId: string): string {
-  return path.join(process.cwd(), 'data', 'projects', projectId, 'documents', `meeting-${getCleanMeetingId(meetingId)}`);
+  return path.join(getProjectsDir(), projectId, 'documents', `meeting-${getCleanMeetingId(meetingId)}`);
 }
 
 function getMeetingsDir(projectId: string): string {
-  return path.join(process.cwd(), 'data', 'projects', projectId, 'meetings');
+  return path.join(getProjectsDir(), projectId, 'meetings');
 }
 
 export class DocumentStore {
@@ -49,7 +50,7 @@ export class DocumentStore {
     // Try consolidated JSON first
     const bundlePath = path.join(getMeetingsDir(projectId), `meeting-${cleanId}-documents.json`);
     try {
-      const data = await fs.readFile(bundlePath, 'utf-8');
+      const data = await fs.readFile(/*turbopackIgnore: true*/ bundlePath, 'utf-8');
       return JSON.parse(data);
     } catch {
       // Fallback: read individual markdown files
@@ -64,13 +65,12 @@ export class DocumentStore {
           fs.readFile(path.join(docDir, 'traceability.md'), 'utf-8').catch(() => ''),
         ]);
 
-        if (!srs && !summary) return null;
+        if (!summary && !srs) return null;
 
         return {
           meetingId,
           projectId,
-          meetingTitle: 'Requirement Engineering Session',
-          generatedAt: new Date().toISOString(),
+          meetingTitle: `Meeting ${cleanId}`,
           summary,
           srs,
           requirements,
@@ -80,6 +80,7 @@ export class DocumentStore {
           openQuestions: [],
           actionItems: [],
           impactAnalysis: '',
+          generatedAt: new Date().toISOString(),
         };
       } catch {
         return null;

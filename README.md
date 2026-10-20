@@ -57,6 +57,28 @@ SpecPilot is an enterprise-grade AI Requirements Engineering system designed to 
 
 ---
 
+## Deploy to Vercel
+
+When deploying to [Vercel](https://vercel.com) via GitHub integration:
+
+1. **Framework Preset**: Next.js (automatically detected)
+2. **Root Directory**: `./`
+3. **Build Command**: `next build` (or default)
+4. **Output Directory**: `.next` (default)
+5. **Environment Variables**: In your Vercel Project Settings > **Environment Variables**, configure:
+   - `LIVEKIT_URL` (e.g. `wss://your-livekit-url.livekit.cloud`)
+   - `NEXT_PUBLIC_LIVEKIT_URL` (same as `LIVEKIT_URL`)
+   - `LIVEKIT_API_KEY`
+   - `LIVEKIT_API_SECRET`
+   - `DEEPGRAM_API_KEY`
+   - `GROQ_API_KEY`
+   - `OPENROUTER_API_KEY`
+   - `DEEPGRAM_VOICE` (optional, defaults to `aura-2-asteria-en`)
+
+All persistence automatically adapts to Vercel serverless environments with `/tmp` storage and initial repository seed cloning.
+
+---
+
 ## License
 
 MIT License.

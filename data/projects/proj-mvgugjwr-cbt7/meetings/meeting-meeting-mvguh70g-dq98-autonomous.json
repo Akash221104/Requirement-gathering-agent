@@ -1,0 +1,122 @@
+{
+  "meetingId": "meeting-mvguh70g-dq98",
+  "projectId": "proj-mvgugjwr-cbt7",
+  "state": "CLARIFYING",
+  "topics": [
+    "Business Model & Target Audience",
+    "Product Catalog & Browsing",
+    "User Authentication & Checkout"
+  ],
+  "currentTopicIndex": 1,
+  "currentTopic": "Product Catalog & Browsing",
+  "questionsAsked": [
+    "Hi, I'm SpecPilot. I'll help us discover and define today's requirements for Business Model & Target Audience. To start off, could you tell me about the primary purpose of your project and who will be using it?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+    "Great, that is noted. Let's move on to Product Catalog & Browsing. How should that be handled?",
+    "Could you specify a bit more detail on that requirement for Product Catalog & Browsing?",
+    "Could you specify a bit more detail on that requirement for Product Catalog & Browsing?"
+  ],
+  "exchanges": [
+    {
+      "question": "Hi, I'm SpecPilot. I'll help us discover and define today's requirements for Business Model & Target Audience. To start off, could you tell me about the primary purpose of your project and who will be using it?",
+      "answer": "Hello? So we are planning to build an ecommerce application called QuickCart.",
+      "timestamp": "2026-10-20T15:35:46.358Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "It mainly for, like, online shopping.",
+      "timestamp": "2026-10-20T15:35:49.602Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "Okay.",
+      "timestamp": "2026-10-20T15:35:50.545Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "So customer should be able to create an account",
+      "timestamp": "2026-10-20T15:36:03.539Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "browse groceries,",
+      "timestamp": "2026-10-20T15:36:05.247Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "search for products, and add them to the cart. Then they should be able to place an order and get it delivered to their home.",
+      "timestamp": "2026-10-20T15:36:13.008Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "So initially, grass is like fruit.",
+      "timestamp": "2026-10-20T15:36:34.243Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "Vegetable, dairy products, snacks, and household item. Each should have an image, name, price, description, and availability.",
+      "timestamp": "2026-10-20T15:36:42.668Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "Also, we want to search for the product. They should be able to filter them by category and price.",
+      "timestamp": "2026-10-20T15:36:59.394Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "We want to support UPI credit card and cash on delivery feature.",
+      "timestamp": "2026-10-20T15:37:19.172Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Business Model & Target Audience?",
+      "answer": "Yeah.",
+      "timestamp": "2026-10-20T15:37:31.361Z",
+      "topic": "Business Model & Target Audience"
+    },
+    {
+      "question": "Great, that is noted. Let's move on to Product Catalog & Browsing. How should that be handled?",
+      "answer": "So for today, we will end this meeting",
+      "timestamp": "2026-10-20T15:37:34.957Z",
+      "topic": "Product Catalog & Browsing"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Product Catalog & Browsing?",
+      "answer": "The next meeting on Sunday.",
+      "timestamp": "2026-10-20T15:37:40.901Z",
+      "topic": "Product Catalog & Browsing"
+    }
+  ],
+  "unresolvedQuestions": [],
+  "confirmedDecisions": [],
+  "detectedChanges": [],
+  "candidateRequirements": [],
+  "issues": [],
+  "turnCount": 14,
+  "topicClarificationCount": {
+    "Business Model & Target Audience": 10,
+    "Product Catalog & Browsing": 2
+  },
+  "isMeetingFinished": false,
+  "closingMessageSent": false,
+  "lastUpdated": "2026-10-20T15:37:41.031Z",
+  "lastSpokenText": "Could you specify a bit more detail on that requirement for Product Catalog & Browsing?"
+}
