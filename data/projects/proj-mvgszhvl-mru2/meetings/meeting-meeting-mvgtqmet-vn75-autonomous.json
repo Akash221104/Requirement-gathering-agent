@@ -1,0 +1,37 @@
+{
+  "meetingId": "meeting-mvgtqmet-vn75",
+  "projectId": "proj-mvgszhvl-mru2",
+  "state": "CLARIFYING",
+  "topics": [
+    "Catalog & Inventory Management",
+    "Shopping Cart & Checkout",
+    "Payment & Fulfillment"
+  ],
+  "currentTopicIndex": 0,
+  "currentTopic": "Catalog & Inventory Management",
+  "questionsAsked": [
+    "Hi, I'm SpecPilot. Welcome back! In our previous session we discussed Intro meeting. Today, let's dive into Catalog & Inventory Management. To start, could you describe how you'd like this to work?",
+    "Could you specify a bit more detail on that requirement for Catalog & Inventory Management?"
+  ],
+  "exchanges": [
+    {
+      "question": "Hi, I'm SpecPilot. Welcome back! In our previous session we discussed Intro meeting. Today, let's dive into Catalog & Inventory Management. To start, could you describe how you'd like this to work?",
+      "answer": "Hello, SpecPilot.",
+      "timestamp": "2026-10-20T15:14:44.867Z",
+      "topic": "Catalog & Inventory Management"
+    }
+  ],
+  "unresolvedQuestions": [],
+  "confirmedDecisions": [],
+  "detectedChanges": [],
+  "candidateRequirements": [],
+  "issues": [],
+  "turnCount": 2,
+  "topicClarificationCount": {
+    "Catalog & Inventory Management": 1
+  },
+  "isMeetingFinished": false,
+  "closingMessageSent": false,
+  "lastUpdated": "2026-10-20T15:14:45.107Z",
+  "lastSpokenText": "Could you specify a bit more detail on that requirement for Catalog & Inventory Management?"
+}

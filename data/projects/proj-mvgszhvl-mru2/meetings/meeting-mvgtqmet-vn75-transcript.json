@@ -1,0 +1,37 @@
+{
+  "meetingId": "meeting-mvgtqmet-vn75",
+  "projectId": "proj-mvgszhvl-mru2",
+  "segments": [
+    {
+      "id": "seg-mvgtqw3i-4yrm",
+      "meetingId": "meeting-mvgtqmet-vn75",
+      "speakerId": "customer_mvgtqqh0_8hsd",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Hello, SpecPilot.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:14:44.860Z"
+    },
+    {
+      "id": "seg-mvgtqxef-xqiv",
+      "meetingId": "meeting-mvgtqmet-vn75",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Hello!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:14:46.551Z"
+    },
+    {
+      "id": "seg-mvgtqxz8-6ili",
+      "meetingId": "meeting-mvgtqmet-vn75",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "How can I assist you today with the e-commerce website project?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T15:14:47.300Z"
+    }
+  ],
+  "lastUpdated": "2026-10-20T15:14:47.319Z"
+}
