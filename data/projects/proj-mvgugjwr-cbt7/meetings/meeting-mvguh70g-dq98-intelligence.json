@@ -4,22 +4,22 @@
   "candidateRequirements": [],
   "issues": [
     {
-      "id": "ISS-KMKM-1",
+      "id": "ISS-Q4AI-1",
       "issueType": "INCOMPLETENESS",
       "description": "Product filtering and sorting parameters unspecified",
       "explanation": "Session concluded before customer could answer how users should sort products (price, popularity, newest) or filter by size and color.",
       "severity": "medium",
-      "timestamp": "2026-10-20T15:37:52.194Z"
+      "timestamp": "2026-10-20T15:42:08.440Z"
     }
   ],
   "clarificationQuestions": [
     {
-      "id": "CQ-KMKM-1",
+      "id": "CQ-Q4AI-1",
       "question": "What product filters (e.g. price range, size, color, brand) and sorting criteria should be enabled in clothing categories?",
       "rationale": "Required to build the catalog database indexing and UI filter sidebar.",
       "suggestedTo": "REQUIREMENT_ENGINEER",
-      "timestamp": "2026-10-20T15:37:52.194Z"
+      "timestamp": "2026-10-20T15:42:08.440Z"
     }
   ],
-  "lastUpdated": "2026-10-20T15:37:52.205Z"
+  "lastUpdated": "2026-10-20T15:42:08.442Z"
 }
