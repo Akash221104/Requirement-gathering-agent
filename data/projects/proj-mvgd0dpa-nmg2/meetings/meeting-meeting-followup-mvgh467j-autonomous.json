@@ -1,0 +1,143 @@
+{
+  "meetingId": "meeting-followup-mvgh467j",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "state": "CLARIFYING",
+  "topics": [
+    "User Authentication",
+    "Role Permissions",
+    "Session & Security"
+  ],
+  "currentTopicIndex": 1,
+  "currentTopic": "Role Permissions",
+  "questionsAsked": [
+    "Hi, I'm SpecPilot. I'll help us capture and clarify today's requirements for User Authentication. To start, can you describe how you expect users to interact with this feature?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Great, that is noted. Let's move on to Role Permissions. How should that be handled?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?"
+  ],
+  "exchanges": [
+    {
+      "question": "Hi, I'm SpecPilot. I'll help us capture and clarify today's requirements for User Authentication. To start, can you describe how you expect users to interact with this feature?",
+      "answer": "Can you give me a brief",
+      "timestamp": "2026-10-20T09:22:22.660Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "of",
+      "timestamp": "2026-10-20T09:22:23.406Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "the last meeting what we have been discussed?",
+      "timestamp": "2026-10-20T09:22:32.547Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "I think you should be, like,",
+      "timestamp": "2026-10-20T09:22:49.181Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "had all the notes of previous point and then come today. Right?",
+      "timestamp": "2026-10-20T09:22:54.453Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Great, that is noted. Let's move on to Role Permissions. How should that be handled?",
+      "answer": "So in last in last meeting, have tell you for categories of share, jeans,",
+      "timestamp": "2026-10-20T09:23:13.321Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "pants. But now",
+      "timestamp": "2026-10-20T09:23:14.744Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "our plan is to shift only to",
+      "timestamp": "2026-10-20T09:23:18.082Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "men's",
+      "timestamp": "2026-10-20T09:23:19.064Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "wear.",
+      "timestamp": "2026-10-20T09:23:19.789Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "Not females wear.",
+      "timestamp": "2026-10-20T09:23:21.423Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "Okay.",
+      "timestamp": "2026-10-20T09:23:22.835Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "No. No. No. No. No.",
+      "timestamp": "2026-10-20T09:23:35.343Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "The whole",
+      "timestamp": "2026-10-20T09:23:36.803Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "should be only for men's wear. No women's wear for that.",
+      "timestamp": "2026-10-20T09:23:41.177Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "Hey. Shut up, man.",
+      "timestamp": "2026-10-20T09:23:54.820Z",
+      "topic": "Role Permissions"
+    }
+  ],
+  "unresolvedQuestions": [],
+  "confirmedDecisions": [],
+  "detectedChanges": [],
+  "candidateRequirements": [],
+  "issues": [],
+  "turnCount": 17,
+  "topicClarificationCount": {
+    "User Authentication": 4,
+    "Role Permissions": 11
+  },
+  "isMeetingFinished": false,
+  "closingMessageSent": false,
+  "lastUpdated": "2026-10-20T09:23:54.986Z",
+  "lastSpokenText": "Could you specify a bit more detail on that requirement for Role Permissions?"
+}

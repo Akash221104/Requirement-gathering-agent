@@ -1,0 +1,40 @@
+{
+  "versionNumber": 6,
+  "versionLabel": "v1.5",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "approvedBy": "Lead Requirement Engineer",
+  "timestamp": "2026-10-20T09:20:52.163Z",
+  "changeSummary": "Approved new requirement REQ-MVGH3SUB: \"The system shall provide an e-commerce platform allowing cus\"",
+  "requirements": [
+    {
+      "id": "REQ-MVGDHHPG",
+      "title": "sdf",
+      "description": "sdf",
+      "category": "functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T07:39:32.452Z"
+    },
+    {
+      "id": "REQ-MVGH3QV2",
+      "title": "Elicited Requirement",
+      "description": "Elicited Requirement",
+      "category": "functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T09:20:49.598Z"
+    },
+    {
+      "id": "REQ-MVGH3SUB",
+      "title": "The system shall provide an e-commerce platform allowing cus",
+      "description": "The system shall provide an e-commerce platform allowing customers to browse and purchase clothes online, including seasonal collections (winter, summer, and rainy season wear).",
+      "category": "functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T09:20:52.163Z"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "versionNumber": 8,
+  "versionLabel": "v1.7",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "approvedBy": "Lead Requirement Engineer",
+  "timestamp": "2026-10-20T09:21:02.626Z",
+  "changeSummary": "Approved new requirement REQ-MVGH40WY: \"The application shall prompt the user to sign in with their\"",
+  "requirements": [
+    {
+      "id": "REQ-MVGDHHPG",
+      "title": "sdf",
+      "description": "sdf",
+      "category": "functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T07:39:32.452Z"
+    },
+    {
+      "id": "REQ-MVGH3QV2",
+      "title": "Elicited Requirement",
+      "description": "Elicited Requirement",
+      "category": "functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T09:20:49.598Z"
+    },
+    {
+      "id": "REQ-MVGH3SUB",
+      "title": "The system shall provide an e-commerce platform allowing cus",
+      "description": "The system shall provide an e-commerce platform allowing customers to browse and purchase clothes online, including seasonal collections (winter, summer, and rainy season wear).",
+      "category": "functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T09:20:52.163Z"
+    },
+    {
+      "id": "REQ-MVGH3VBE",
+      "title": "The website shall segment clothing catalogs by target demogr",
+      "description": "The website shall segment clothing catalogs by target demographics: Children & Teenagers (ages 0–18, boys and girls) and Young Adults (ages 18–30).",
+      "category": "non_functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T09:20:55.370Z"
+    },
+    {
+      "id": "REQ-MVGH40WY",
+      "title": "The application shall prompt the user to sign in with their",
+      "description": "The application shall prompt the user to sign in with their Google account when they attempt to like/favorite a product or initiate a checkout purchase.",
+      "category": "functional",
+      "status": "approved",
+      "priority": "high",
+      "version": 1,
+      "updatedAt": "2026-10-20T09:21:02.626Z"
+    }
+  ]
+}

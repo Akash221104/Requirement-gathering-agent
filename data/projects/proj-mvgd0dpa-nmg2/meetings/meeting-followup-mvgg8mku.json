@@ -1,0 +1,26 @@
+{
+  "id": "meeting-followup-mvgg8mku",
+  "title": "Follow-Up Requirement Discovery (Next Sunday)",
+  "mode": "autonomous",
+  "status": "scheduled",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "createdAt": "2026-10-20T08:56:37.711Z",
+  "participants": [],
+  "agenda": [
+    {
+      "id": "agenda-1",
+      "topic": "Review and approve Google SSO login flow",
+      "completed": false
+    },
+    {
+      "id": "agenda-2",
+      "topic": "Specify product sorting & filtering criteria (size, price, brand)",
+      "completed": false
+    },
+    {
+      "id": "agenda-3",
+      "topic": "Define shopping cart and payment gateway requirements",
+      "completed": false
+    }
+  ]
+}

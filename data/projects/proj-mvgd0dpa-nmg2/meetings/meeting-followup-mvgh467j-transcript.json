@@ -1,0 +1,277 @@
+{
+  "meetingId": "meeting-followup-mvgh467j",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "segments": [
+    {
+      "id": "seg-mvgh5cnt-bcg3",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Hi, I'm SpecPilot. I'll help us capture and clarify today's requirements for User Authentication. To start, can you describe how you expect users to interact with this feature?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:04.504Z"
+    },
+    {
+      "id": "seg-mvgh5qo2-q73w",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Can you give me a brief",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:22.658Z"
+    },
+    {
+      "id": "seg-mvgh5r8s-k21r",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "of",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:23.404Z"
+    },
+    {
+      "id": "seg-mvgh5yaq-cak5",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "the last meeting what we have been discussed?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:32.546Z"
+    },
+    {
+      "id": "seg-mvgh5yx7-wvrp",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "I don’t have access to previous meeting notes, but I can help you summarize or clarify topics discussed.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:33.355Z"
+    },
+    {
+      "id": "seg-mvgh64b5-2ky8",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Can you provide an overview or key points from that meeting?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:40.337Z"
+    },
+    {
+      "id": "seg-mvgh6b4s-ksmk",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "I think you should be, like,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:49.180Z"
+    },
+    {
+      "id": "seg-mvgh6f78-u9mf",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "had all the notes of previous point and then come today. Right?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:54.452Z"
+    },
+    {
+      "id": "seg-mvgh6fq2-4fyq",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "I understand that having all previous notes would be helpful, but I don’t retain past conversations.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:22:55.130Z"
+    },
+    {
+      "id": "seg-mvgh6jn2-ivee",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Let’s focus on gathering your current requirements.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:00.206Z"
+    },
+    {
+      "id": "seg-mvgh6lpk-gamv",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "What specific features do you want for user authentication?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:02.888Z"
+    },
+    {
+      "id": "seg-mvgh6trc-iyyb",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "So in last in last meeting, have tell you for categories of share, jeans,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:13.320Z"
+    },
+    {
+      "id": "seg-mvgh6uuv-9aj0",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "pants. But now",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:14.743Z"
+    },
+    {
+      "id": "seg-mvgh6xfk-xzm2",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "our plan is to shift only to",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:18.080Z"
+    },
+    {
+      "id": "seg-mvgh6y6v-gz6l",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "men's",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:19.063Z"
+    },
+    {
+      "id": "seg-mvgh6yqz-tn30",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "wear.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:19.787Z"
+    },
+    {
+      "id": "seg-mvgh700e-n1tl",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Not females wear.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:21.422Z"
+    },
+    {
+      "id": "seg-mvgh70py-5l7q",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Got it!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:22.342Z"
+    },
+    {
+      "id": "seg-mvgh713m-nufv",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Okay.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:22.834Z"
+    },
+    {
+      "id": "seg-mvgh71ni-w1d1",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "To clarify, should the role permissions for user authentication include separate access for men’s wear compared to other categories?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:23.550Z"
+    },
+    {
+      "id": "seg-mvgh7ar2-zeai",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "No. No. No. No. No.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:35.342Z"
+    },
+    {
+      "id": "seg-mvgh7bvl-639l",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "The whole",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:36.801Z"
+    },
+    {
+      "id": "seg-mvgh7f94-1apt",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "should be only for men's wear. No women's wear for that.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:41.176Z"
+    },
+    {
+      "id": "seg-mvgh7fvp-b89u",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Understood.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:41.989Z"
+    },
+    {
+      "id": "seg-mvgh7gik-902x",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "So, all user permissions will solely focus on men's wear.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:42.812Z"
+    },
+    {
+      "id": "seg-mvgh7kck-0nl2",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "What specific roles do you anticipate needing for managing this feature?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:47.780Z"
+    },
+    {
+      "id": "seg-mvgh7ps2-7qi7",
+      "meetingId": "meeting-followup-mvgh467j",
+      "speakerId": "customer_mvgh58rw_48uz",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Hey. Shut up, man.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T09:23:54.818Z"
+    }
+  ],
+  "lastUpdated": "2026-10-20T09:23:54.825Z"
+}

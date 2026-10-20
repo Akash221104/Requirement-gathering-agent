@@ -1,0 +1,697 @@
+{
+  "meetingId": "meeting-mvgd32au-bs3f",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "segments": [
+    {
+      "id": "seg-mvgd4vqg-strv",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Hi, I'm SpecPilot. I'll help us capture and clarify today's requirements for User Authentication. To start, can you describe how you expect users to interact with this feature?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:29:44.103Z"
+    },
+    {
+      "id": "seg-mvgd57na-7a5z",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Hello, SpecPilot. I want",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:29:59.542Z"
+    },
+    {
+      "id": "seg-mvgd5aaw-chge",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "to build my website for",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:02.984Z"
+    },
+    {
+      "id": "seg-mvgd5bbp-kuy3",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Great!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:04.309Z"
+    },
+    {
+      "id": "seg-mvgd5bsa-9202",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "What is the primary purpose of your website?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:04.906Z"
+    },
+    {
+      "id": "seg-mvgd5ibv-zlym",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "So I ran an offline business",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:13.387Z"
+    },
+    {
+      "id": "seg-mvgd5k4f-a56g",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "of selling",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:15.711Z"
+    },
+    {
+      "id": "seg-mvgd5kyq-rgrv",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "clothes,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:16.802Z"
+    },
+    {
+      "id": "seg-mvgd5myv-1hgv",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "So for that, I want to make",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:19.399Z"
+    },
+    {
+      "id": "seg-mvgd5otu-lwot",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "my website and sell it online.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:21.810Z"
+    },
+    {
+      "id": "seg-mvgd5psv-9sa6",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "That sounds exciting!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:23.071Z"
+    },
+    {
+      "id": "seg-mvgd5qvp-30dp",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Who are the main users of your website—are they customers, administrators, or both?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:24.469Z"
+    },
+    {
+      "id": "seg-mvgd5uvo-5eso",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "It seems like I may need to clarify my question.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:29.652Z"
+    },
+    {
+      "id": "seg-mvgd5x1n-u5gv",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Can you specify who will be interacting with your website?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:32.459Z"
+    },
+    {
+      "id": "seg-mvgd5zm8-hh4m",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "For example, will it primarily be customers looking to buy clothes, or will you also have administrators managing the site?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:35.792Z"
+    },
+    {
+      "id": "seg-mvgd68ym-irzc",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "No. It's for buying clothes.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:47.902Z"
+    },
+    {
+      "id": "seg-mvgd6cb7-lz1e",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "And the users will be the age group of zero to",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:52.243Z"
+    },
+    {
+      "id": "seg-mvgd6d89-xbol",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "eighteen,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:53.433Z"
+    },
+    {
+      "id": "seg-mvgd6ese-3iis",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "boys and girls,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:55.454Z"
+    },
+    {
+      "id": "seg-mvgd6gg5-a12m",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "also eighteen to",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:30:57.605Z"
+    },
+    {
+      "id": "seg-mvgd6kqs-qz2z",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "thirty age group, and we sell all type of clothe, winter, cloth, summer cloth,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:03.171Z"
+    },
+    {
+      "id": "seg-mvgd6m8f-c6yh",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "rainy clothes.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:05.103Z"
+    },
+    {
+      "id": "seg-mvgd6n54-8bhe",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Etcetera.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:06.280Z"
+    },
+    {
+      "id": "seg-mvgd6nn0-hhzp",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Thank you for that detail!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:06.924Z"
+    },
+    {
+      "id": "seg-mvgd6osu-0yen",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "To confirm, your target users are primarily young customers aged 0-30, inclusive of different clothing types for various weather conditions.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:08.430Z"
+    },
+    {
+      "id": "seg-mvgd6vs1-gzlm",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "What specific features do you want to include for user authentication, such as login, registration, or password recovery?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:17.473Z"
+    },
+    {
+      "id": "seg-mvgd7950-dkd3",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Uh, yes. Every user should be logged in with Google.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:34.788Z"
+    },
+    {
+      "id": "seg-mvgd79vd-0yof",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Account.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:35.737Z"
+    },
+    {
+      "id": "seg-mvgd7b1j-xi1p",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "And",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:37.255Z"
+    },
+    {
+      "id": "seg-mvgd7biw-1sou",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "after",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:37.880Z"
+    },
+    {
+      "id": "seg-mvgd7d0z-g1vd",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "that, they had",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:39.827Z"
+    },
+    {
+      "id": "seg-mvgd7ebi-mabx",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "to sign in to the account.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:41.502Z"
+    },
+    {
+      "id": "seg-mvgd7f5g-ywx1",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Understood.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:42.580Z"
+    },
+    {
+      "id": "seg-mvgd7fvn-cwfm",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "After signing in with their Google account, what specific actions should users be able to perform on the website?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:43.523Z"
+    },
+    {
+      "id": "seg-mvgd7ob0-g9uj",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "That should be the home screen without",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:54.444Z"
+    },
+    {
+      "id": "seg-mvgd7p23-k47g",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "login.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:55.419Z"
+    },
+    {
+      "id": "seg-mvgd7r77-1sx1",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "If any user clicked some",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:58.195Z"
+    },
+    {
+      "id": "seg-mvgd7rz1-swe4",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "like,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:31:59.197Z"
+    },
+    {
+      "id": "seg-mvgd7u5t-i0na",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "a product, then he should be",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:02.033Z"
+    },
+    {
+      "id": "seg-mvgd7ur7-x6iz",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "like,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:02.803Z"
+    },
+    {
+      "id": "seg-mvgd7vew-eh0u",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "log in.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:03.656Z"
+    },
+    {
+      "id": "seg-mvgd7woi-aanx",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "After that,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:05.298Z"
+    },
+    {
+      "id": "seg-mvgd7yqb-rpxi",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "login, he can buy products,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:07.955Z"
+    },
+    {
+      "id": "seg-mvgd81we-70iw",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "every... Like, he can show the home page, then",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:12.062Z"
+    },
+    {
+      "id": "seg-mvgd82o1-tk23",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "each",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:13.057Z"
+    },
+    {
+      "id": "seg-mvgd84fe-te48",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "clothes category pages.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:15.338Z"
+    },
+    {
+      "id": "seg-mvgd869i-uq9z",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Age group page,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:17.718Z"
+    },
+    {
+      "id": "seg-mvgd8779-v6yz",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "and catalog.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:18.933Z"
+    },
+    {
+      "id": "seg-mvgd885d-2j7l",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Got it!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:20.161Z"
+    },
+    {
+      "id": "seg-mvgd88qg-8obk",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Users can browse the home page and categories without logging in but must log in to like or purchase products.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:20.920Z"
+    },
+    {
+      "id": "seg-mvgd8dpe-zk7s",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Could you please clarify what different clothing categories you'd like to feature on the site?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:27.362Z"
+    },
+    {
+      "id": "seg-mvgd8kwe-ood8",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Different coding categories are",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:36.686Z"
+    },
+    {
+      "id": "seg-mvgd8n6s-df26",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "shirt, t shirts,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:39.651Z"
+    },
+    {
+      "id": "seg-mvgd8ohr-j7fm",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "jeans,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:41.342Z"
+    },
+    {
+      "id": "seg-mvgd8pok-q78c",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "nightwear,",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:42.884Z"
+    },
+    {
+      "id": "seg-mvgd8rk2-n9ji",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "office wear, etcetera.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:45.314Z"
+    },
+    {
+      "id": "seg-mvgd8si0-x0da",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Thank you for that information.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:46.536Z"
+    },
+    {
+      "id": "seg-mvgd8tpd-nt4o",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "So, you want to include categories like shirts, t-shirts, jeans, nightwear, and office wear.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:48.097Z"
+    },
+    {
+      "id": "seg-mvgd8z3u-tkno",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "How should users be able to filter or sort products within these categories?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:32:55.097Z"
+    },
+    {
+      "id": "seg-mvgd95jz-ytnv",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Okay. So our time is running out for today.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:03.455Z"
+    },
+    {
+      "id": "seg-mvgd97mj-3c7r",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "This is it for today. We will continue",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:06.139Z"
+    },
+    {
+      "id": "seg-mvgd99nb-bl9e",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "on next Sunday this week.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:08.759Z"
+    },
+    {
+      "id": "seg-mvgd9a9i-126b",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Thank you for your time today!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:09.558Z"
+    },
+    {
+      "id": "seg-mvgd9bla-74aa",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Just to summarize, we've discussed user authentication, access to categories, and clothing types.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:11.278Z"
+    },
+    {
+      "id": "seg-mvgd9g85-wxg4",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "I look forward to continuing our discussion next Sunday.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:17.285Z"
+    },
+    {
+      "id": "seg-mvgd9iou-8mkl",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "If you think of any additional requirements before then, feel free to reach out!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:20.478Z"
+    },
+    {
+      "id": "seg-mvgd9ogb-br53",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "customer_mvgd4prv_1cy5",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Yes. Sure. Thank you.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:27.947Z"
+    },
+    {
+      "id": "seg-mvgd9qum-jg14",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "You're welcome!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:31.054Z"
+    },
+    {
+      "id": "seg-mvgd9rp1-fxi9",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Have a great day, and I'll see you next Sunday!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T07:33:32.149Z"
+    }
+  ],
+  "lastUpdated": "2026-10-20T07:33:32.205Z"
+}

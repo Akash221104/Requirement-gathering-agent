@@ -1,0 +1,139 @@
+{
+  "meetingId": "meeting-mvgd32au-bs3f",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "candidateRequirements": [
+    {
+      "id": "CR-3D4K-1",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "requirementText": "The system shall provide an e-commerce platform allowing customers to browse and purchase clothes online, including seasonal collections (winter, summer, and rainy season wear).",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "APPROVED",
+      "timestamp": "2026-10-20T09:20:31.796Z",
+      "notes": "Approved by Lead Requirement Engineer",
+      "reviewedBy": "Lead Requirement Engineer",
+      "reviewedAt": "2026-10-20T09:20:52.143Z"
+    },
+    {
+      "id": "CR-3D4K-2",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "requirementText": "The website shall segment clothing catalogs by target demographics: Children & Teenagers (ages 0–18, boys and girls) and Young Adults (ages 18–30).",
+      "type": "BUSINESS",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "APPROVED",
+      "timestamp": "2026-10-20T09:20:31.796Z",
+      "notes": "Approved by Lead Requirement Engineer",
+      "reviewedBy": "Lead Requirement Engineer",
+      "reviewedAt": "2026-10-20T09:20:55.352Z"
+    },
+    {
+      "id": "CR-3D4K-3",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "requirementText": "The application shall support Google Single Sign-On (OAuth 2.0 Google Account login) allowing users to authenticate quickly without manual email registration.",
+      "type": "SECURITY",
+      "priority": "critical",
+      "confidence": 0.98,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "APPROVED",
+      "timestamp": "2026-10-20T09:20:31.796Z",
+      "notes": "Approved by Lead Requirement Engineer",
+      "taggedForNextMeeting": true,
+      "reviewedBy": "Lead Requirement Engineer",
+      "reviewedAt": "2026-10-20T09:21:09.154Z"
+    },
+    {
+      "id": "CR-3D4K-4",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "requirementText": "The home screen and product catalog pages shall be publicly accessible without requiring user authentication. Guest users can freely view products.",
+      "type": "UI_UX",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "APPROVED",
+      "timestamp": "2026-10-20T09:20:31.796Z",
+      "notes": "Approved by Lead Requirement Engineer",
+      "reviewedBy": "Lead Requirement Engineer",
+      "reviewedAt": "2026-10-20T09:21:03.772Z"
+    },
+    {
+      "id": "CR-3D4K-5",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "requirementText": "The application shall prompt the user to sign in with their Google account when they attempt to like/favorite a product or initiate a checkout purchase.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "APPROVED",
+      "timestamp": "2026-10-20T09:20:31.796Z",
+      "notes": "Approved by Lead Requirement Engineer",
+      "reviewedBy": "Lead Requirement Engineer",
+      "reviewedAt": "2026-10-20T09:21:02.598Z"
+    },
+    {
+      "id": "CR-3D4K-6",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "requirementText": "The platform shall provide distinct category navigation for Shirts, T-Shirts, Jeans, Nightwear, and Office Wear with dedicated catalog view pages.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "APPROVED",
+      "timestamp": "2026-10-20T09:20:31.796Z",
+      "notes": "Approved by Lead Requirement Engineer",
+      "taggedForNextMeeting": true,
+      "reviewedBy": "Lead Requirement Engineer",
+      "reviewedAt": "2026-10-20T11:42:12.385Z"
+    },
+    {
+      "id": "CR-QQN1-3",
+      "meetingId": "meeting-mvgd32au-bs3f",
+      "requirementText": "Elicited Requirement",
+      "type": "FUNCTIONAL",
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "manual",
+      "confidence": 1,
+      "status": "APPROVED",
+      "timestamp": "2026-10-20T09:20:49.583Z",
+      "notes": "Approved by Lead Requirement Engineer",
+      "reviewedBy": "Lead Requirement Engineer",
+      "reviewedAt": "2026-10-20T09:20:49.583Z"
+    }
+  ],
+  "issues": [
+    {
+      "id": "ISS-3D4K-1",
+      "issueType": "INCOMPLETENESS",
+      "description": "Product filtering and sorting parameters unspecified",
+      "explanation": "Session concluded before customer could answer how users should sort products (price, popularity, newest) or filter by size and color.",
+      "severity": "medium",
+      "timestamp": "2026-10-20T09:20:31.796Z"
+    }
+  ],
+  "clarificationQuestions": [
+    {
+      "id": "CQ-5VHZ-1",
+      "question": "What product filters (e.g. price range, size, color, brand) and sorting criteria should be enabled in clothing categories?",
+      "rationale": "Required to build the catalog database indexing and UI filter sidebar.",
+      "suggestedTo": "REQUIREMENT_ENGINEER",
+      "timestamp": "2026-10-20T11:42:26.997Z"
+    }
+  ],
+  "lastUpdated": "2026-10-20T11:42:27.033Z"
+}

@@ -1,0 +1,97 @@
+{
+  "meetingId": "meeting-mvgmrdkl-dgj6",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "segments": [
+    {
+      "id": "seg-mvgmrrnc-ta87",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "customer_mvgmrkrd_qia8",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Hello?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T11:59:28.440Z"
+    },
+    {
+      "id": "seg-mvgms84o-47h7",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "How can I assist you with your requirement engineering needs today?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T11:59:49.800Z"
+    },
+    {
+      "id": "seg-mvgmsana-7nna",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "customer_mvgmrkrd_qia8",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Hello?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T11:59:53.062Z"
+    },
+    {
+      "id": "seg-mvgmsazp-vgy5",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "Hello again!",
+      "isFinal": true,
+      "timestamp": "2026-10-20T11:59:53.509Z"
+    },
+    {
+      "id": "seg-mvgmsd28-5pjq",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "How can I help you?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T11:59:56.192Z"
+    },
+    {
+      "id": "seg-mvgmsfnw-me2q",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "customer_mvgmrkrd_qia8",
+      "speakerName": "Customer Stakeholder",
+      "speakerRole": "CUSTOMER",
+      "text": "Hello, spec pilot. Can you hear me?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T11:59:59.564Z"
+    },
+    {
+      "id": "seg-mvgmsqif-z82r",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "specpilot-ai",
+      "speakerName": "SpecPilot AI",
+      "speakerRole": "SPEC_PILOT",
+      "text": "How may I assist you today?",
+      "isFinal": true,
+      "timestamp": "2026-10-20T12:00:13.623Z"
+    },
+    {
+      "id": "seg-mvgmtkbz-hvjl",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "engineer_mvgmsp7e_skzv",
+      "speakerName": "Requirement Engineer",
+      "speakerRole": "REQUIREMENT_ENGINEER",
+      "text": "The product.",
+      "isFinal": true,
+      "timestamp": "2026-10-20T12:00:52.271Z"
+    },
+    {
+      "id": "seg-mvgmutsx-oewf",
+      "meetingId": "meeting-mvgmrdkl-dgj6",
+      "speakerId": "engineer_mvgmsp7e_skzv",
+      "speakerName": "Requirement Engineer",
+      "speakerRole": "REQUIREMENT_ENGINEER",
+      "text": "For male flame business that is close business. So I want the rep saying in that I can sell my CLO profitability Yeah. I would tell you that. So, basically, I want ten website In that, I can push",
+      "isFinal": true,
+      "timestamp": "2026-10-20T12:01:51.201Z"
+    }
+  ],
+  "lastUpdated": "2026-10-20T12:01:51.210Z"
+}

@@ -1,0 +1,233 @@
+{
+  "meetingId": "meeting-mvgd32au-bs3f",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "state": "COMPLETED",
+  "topics": [
+    "User Authentication",
+    "Role Permissions",
+    "Session & Security"
+  ],
+  "currentTopicIndex": 1,
+  "currentTopic": "Role Permissions",
+  "questionsAsked": [
+    "Hi, I'm SpecPilot. I'll help us capture and clarify today's requirements for User Authentication. To start, can you describe how you expect users to interact with this feature?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Could you specify a bit more detail on that requirement for User Authentication?",
+    "Great, that is noted. Let's move on to Role Permissions. How should that be handled?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?",
+    "Could you specify a bit more detail on that requirement for Role Permissions?"
+  ],
+  "exchanges": [
+    {
+      "question": "Hi, I'm SpecPilot. I'll help us capture and clarify today's requirements for User Authentication. To start, can you describe how you expect users to interact with this feature?",
+      "answer": "Hello, SpecPilot. I want",
+      "timestamp": "2026-10-20T07:29:59.544Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "to build my website for",
+      "timestamp": "2026-10-20T07:30:02.985Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "So I ran an offline business",
+      "timestamp": "2026-10-20T07:30:13.388Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "of selling",
+      "timestamp": "2026-10-20T07:30:15.712Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "clothes,",
+      "timestamp": "2026-10-20T07:30:16.803Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "So for that, I want to make",
+      "timestamp": "2026-10-20T07:30:19.400Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "my website and sell it online.",
+      "timestamp": "2026-10-20T07:30:21.812Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "No. It's for buying clothes.",
+      "timestamp": "2026-10-20T07:30:47.903Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "And the users will be the age group of zero to",
+      "timestamp": "2026-10-20T07:30:52.244Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "eighteen,",
+      "timestamp": "2026-10-20T07:30:53.434Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "boys and girls,",
+      "timestamp": "2026-10-20T07:30:55.456Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "also eighteen to",
+      "timestamp": "2026-10-20T07:30:57.606Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "thirty age group, and we sell all type of clothe, winter, cloth, summer cloth,",
+      "timestamp": "2026-10-20T07:31:03.172Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "rainy clothes.",
+      "timestamp": "2026-10-20T07:31:05.105Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "Etcetera.",
+      "timestamp": "2026-10-20T07:31:06.281Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for User Authentication?",
+      "answer": "Uh, yes. Every user should be logged in with Google.",
+      "timestamp": "2026-10-20T07:31:34.789Z",
+      "topic": "User Authentication"
+    },
+    {
+      "question": "Great, that is noted. Let's move on to Role Permissions. How should that be handled?",
+      "answer": "Account.",
+      "timestamp": "2026-10-20T07:31:35.738Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "And",
+      "timestamp": "2026-10-20T07:31:37.267Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "after",
+      "timestamp": "2026-10-20T07:31:37.881Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "that, they had",
+      "timestamp": "2026-10-20T07:31:39.828Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "to sign in to the account.",
+      "timestamp": "2026-10-20T07:31:41.504Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "That should be the home screen without",
+      "timestamp": "2026-10-20T07:31:54.445Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "login.",
+      "timestamp": "2026-10-20T07:31:55.447Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "If any user clicked some",
+      "timestamp": "2026-10-20T07:31:58.196Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "like,",
+      "timestamp": "2026-10-20T07:31:59.198Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "a product, then he should be",
+      "timestamp": "2026-10-20T07:32:02.034Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "like,",
+      "timestamp": "2026-10-20T07:32:02.804Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "log in.",
+      "timestamp": "2026-10-20T07:32:03.657Z",
+      "topic": "Role Permissions"
+    },
+    {
+      "question": "Could you specify a bit more detail on that requirement for Role Permissions?",
+      "answer": "After that,",
+      "timestamp": "2026-10-20T07:32:05.299Z",
+      "topic": "Role Permissions"
+    }
+  ],
+  "unresolvedQuestions": [],
+  "confirmedDecisions": [],
+  "detectedChanges": [],
+  "candidateRequirements": [],
+  "issues": [],
+  "turnCount": 30,
+  "topicClarificationCount": {
+    "User Authentication": 15,
+    "Role Permissions": 12
+  },
+  "isMeetingFinished": true,
+  "closingMessageSent": true,
+  "lastUpdated": "2026-10-20T07:32:05.301Z",
+  "lastSpokenText": "We've reached our time limit for today. I have captured the current requirements and the remaining points will be marked for engineer review."
+}

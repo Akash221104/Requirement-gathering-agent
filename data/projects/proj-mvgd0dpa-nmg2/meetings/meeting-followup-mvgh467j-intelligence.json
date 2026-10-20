@@ -1,0 +1,22 @@
+{
+  "meetingId": "meeting-followup-mvgh467j",
+  "projectId": "proj-mvgd0dpa-nmg2",
+  "candidateRequirements": [
+    {
+      "id": "CR-7R0E-1",
+      "meetingId": "meeting-followup-mvgh467j",
+      "requirementText": "The platform shall provide distinct category navigation for Shirts, T-Shirts, Jeans, Nightwear, and Office Wear with dedicated catalog view pages.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T09:23:56.413Z"
+    }
+  ],
+  "issues": [],
+  "clarificationQuestions": [],
+  "lastUpdated": "2026-10-20T09:23:56.416Z"
+}
