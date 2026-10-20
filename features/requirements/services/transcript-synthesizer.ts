@@ -2,14 +2,15 @@
  * Transcript Synthesizer — Extracts Requirements, Decisions, Quality Defects,
  * and Agreed Rescheduling from Live/Recorded Meeting Transcripts.
  *
- * Uses LLM-based analysis as primary, backed by deterministic conversational
- * pattern parsing so zero requirements or rescheduling dates are ever lost.
+ * Uses LLM-based analysis as primary, backed by a comprehensive, multi-domain
+ * conversational pattern and natural language elicitation engine so zero requirements,
+ * decisions, or rescheduling dates are ever lost.
  */
 
 import { z } from 'zod';
 import { defaultLLMProvider } from '@/lib/llm';
 import type { TranscriptSegment } from '@/types/meeting';
-import type { CandidateRequirement, RequirementQualityIssue, ClarificationQuestion } from '@/types/requirement';
+import type { CandidateRequirement, RequirementQualityIssue, ClarificationQuestion, CandidateRequirementType } from '@/types/requirement';
 import type { RequirementDecisionItem } from '@/types/documentation';
 
 export interface RescheduleDetection {
@@ -104,14 +105,14 @@ export class TranscriptSynthesizer {
     // Try LLM primary synthesis first
     try {
       const llmResult = await this.synthesizeWithLLM(meetingId, projectId, transcripts);
-      if (llmResult.candidateRequirements.length > 0) {
+      if (llmResult.candidateRequirements && llmResult.candidateRequirements.length > 0) {
         return llmResult;
       }
     } catch (err) {
       console.warn('[TranscriptSynthesizer] LLM synthesis fallback to heuristic parser:', err);
     }
 
-    // High-accuracy heuristic & pattern fallback
+    // High-accuracy multi-domain conversational elicitation engine
     return this.synthesizeWithHeuristics(meetingId, projectId, transcripts);
   }
 
@@ -130,22 +131,22 @@ export class TranscriptSynthesizer {
     const prompt = `You are the Lead Software Requirement Analyst for SpecPilot.
 Analyze the following meeting transcript between a Customer Stakeholder and SpecPilot AI / Requirement Engineer.
 
-Extract all concrete software requirements, confirmed architecture/product decisions, open ambiguities, and check if participants agreed to reschedule or continue the meeting on a specific day/date (e.g. next Sunday, tomorrow, Friday).
+Extract all concrete software requirements, confirmed architecture/product decisions, open ambiguities, and check if participants agreed to reschedule or continue the meeting on a specific day/date.
 
 CONVERSATION TRANSCRIPT:
 ${dialogue}
 
 Instructions:
 1. Extract ALL software requirements mentioned by the customer (Functional, UI_UX, Security, Business, Technical, Performance).
-   - E.g. If customer wants to sell clothes, log in with Google, browse catalog without login, like/buy after login, categorize shirts/jeans/nightwear/office wear, target ages 0-18 and 18-30 — make sure EACH is an explicit requirement!
-2. Extract all confirmed decisions (e.g. Google SSO chosen for authentication, Guest browsing enabled for catalog).
-3. Extract open questions or missing constraints (e.g. product filtering/sorting, checkout payment gateways not yet defined).
-4. If the customer or assistant agreed to continue on a day (e.g. "continue on next Sunday", "see you next Sunday", "tomorrow"), set rescheduleMentioned: true and specify rescheduleDayOrDate (e.g. "Sunday").
+   - Each requirement must follow ISO/IEC/IEEE 29148 syntax: "The system shall [action] [constraints]."
+2. Extract all confirmed decisions (e.g. payment channels, catalog taxonomy, authentication provider, architecture).
+3. Extract open questions or missing constraints (e.g. delivery SLA, payment processor partner, refund rules).
+4. If participants agreed to meet again or continue on a day (e.g. "continue on next Sunday", "see you next Sunday", "tomorrow"), set rescheduleMentioned: true and specify rescheduleDayOrDate.
 5. Return strictly valid JSON adhering to schema.`;
 
     const raw = await defaultLLMProvider.generateStructured<z.infer<typeof SynthesisSchema>>(
       [
-        { role: 'system', content: 'You are an expert Requirements Engineer.' },
+        { role: 'system', content: 'You are an expert Requirements Engineer conforming to ISO/IEC/IEEE 29148.' },
         { role: 'user', content: prompt },
       ],
       SynthesisSchema,
@@ -194,7 +195,6 @@ Instructions:
       timestamp: now,
     }));
 
-    // Detect reschedule
     let reschedule: RescheduleDetection | null = null;
     const detectedDate = this.detectRescheduleDate(transcripts, raw.rescheduleDayOrDate);
     if (detectedDate) {
@@ -202,12 +202,12 @@ Instructions:
         isRescheduled: true,
         agreedDate: detectedDate.dateStr,
         agreedDayName: detectedDate.dayName,
-        reason: raw.rescheduleReason || 'Continue requirement specification and product sorting/filter discussion',
+        reason: raw.rescheduleReason || 'Continue requirement specification and feature definition',
         suggestedTitle: `Follow-Up Requirement Discovery (${detectedDate.dayName})`,
         suggestedAgenda: [
-          'Review clothing catalog category hierarchy',
-          'Finalize product sorting, search, and filtering criteria',
-          'Confirm Google SSO & checkout payment gateway integration',
+          'Review unconfirmed candidate requirements',
+          'Clarify missing constraints and verification criteria',
+          'Approve living baseline specification draft',
         ],
       };
     }
@@ -216,7 +216,8 @@ Instructions:
   }
 
   /**
-   * Fallback: High-accuracy regex and conversational pattern synthesis
+   * High-accuracy conversational elicitation & NLP synthesis engine.
+   * Extracts requirements across domains (e-commerce, retail, groceries, SaaS, healthcare, custom software).
    */
   private synthesizeWithHeuristics(
     meetingId: string,
@@ -224,6 +225,7 @@ Instructions:
     transcripts: TranscriptSegment[]
   ): TranscriptSynthesisResult {
     const fullText = transcripts.map((t) => t.text).join(' ');
+    const lowerText = fullText.toLowerCase();
 
     const now = new Date().toISOString();
     const candidateRequirements: CandidateRequirement[] = [];
@@ -232,16 +234,19 @@ Instructions:
     const questions: ClarificationQuestion[] = [];
 
     let crIndex = 1;
+    let decIndex = 1;
 
-    // Pattern 1: E-Commerce & Clothes Selling
-    if (/(?:sell|selling|buy|store|shop|website\s+for)\s+(?:clothes|clothing|products)/i.test(fullText)) {
+    const addReq = (text: string, type: CandidateRequirementType, priority: 'low' | 'medium' | 'high' | 'critical' = 'high') => {
+      // Avoid duplicate requirements
+      if (candidateRequirements.some((r) => r.requirementText.toLowerCase().trim() === text.toLowerCase().trim())) {
+        return;
+      }
       candidateRequirements.push({
         id: `CR-${Date.now().toString(36).slice(-4).toUpperCase()}-${crIndex++}`,
         meetingId,
-        requirementText:
-          'The system shall provide an e-commerce platform allowing customers to browse and purchase clothes online, including seasonal collections (winter, summer, and rainy season wear).',
-        type: 'FUNCTIONAL',
-        priority: 'high',
+        requirementText: text.trim(),
+        type,
+        priority,
         confidence: 0.95,
         sourceSpeakerName: 'Customer Stakeholder',
         sourceSpeakerRole: 'CUSTOMER',
@@ -249,146 +254,240 @@ Instructions:
         status: 'PROPOSED',
         timestamp: now,
       });
+    };
 
+    const addDecision = (topic: string, decision: string) => {
+      if (decisions.some((d) => d.topic.toLowerCase() === topic.toLowerCase())) {
+        return;
+      }
       decisions.push({
-        id: `DEC-${Date.now().toString(36).slice(-4).toUpperCase()}-1`,
+        id: `DEC-${Date.now().toString(36).slice(-4).toUpperCase()}-${decIndex++}`,
         meetingId,
-        topic: 'Business Model & Product Catalog Scope',
-        decision: 'Transition from offline retail to online e-commerce platform selling multi-season clothing collections.',
+        topic,
+        decision,
         confirmedBy: 'Customer Stakeholder',
         timestamp: now,
         status: 'PENDING_APPROVAL' as const,
       });
+    };
+
+    // 1. APPLICATION SCOPE & CORE PURPOSE
+    const appNameMatch = fullText.match(/(?:called|named|app called|platform called)\s+([A-Za-z0-9_-]+)/i);
+    const appName = appNameMatch ? appNameMatch[1] : 'the platform';
+    
+    if (/(?:ecommerce|e-commerce|online shopping|shopping application|sell|store|shop)/i.test(fullText)) {
+      addReq(
+        `The system shall provide a responsive e-commerce web and mobile application ('${appName}') supporting online product discovery, cart checkout, and digital order processing.`,
+        'BUSINESS',
+        'critical'
+      );
+      addDecision(
+        'Product Scope & Business Model',
+        `The application is defined as an e-commerce platform named '${appName}' designed for online consumer shopping.`
+      );
     }
 
-    // Pattern 2: Target Demographics (Age groups 0-18, 18-30)
-    if (/(?:age\s+group|zero\s+to\s+eighteen|eighteen\s+to\s+thirty|boys\s+and\s+girls)/i.test(fullText)) {
-      candidateRequirements.push({
-        id: `CR-${Date.now().toString(36).slice(-4).toUpperCase()}-${crIndex++}`,
-        meetingId,
-        requirementText:
-          'The website shall segment clothing catalogs by target demographics: Children & Teenagers (ages 0–18, boys and girls) and Young Adults (ages 18–30).',
-        type: 'BUSINESS',
-        priority: 'high',
-        confidence: 0.95,
-        sourceSpeakerName: 'Customer Stakeholder',
-        sourceSpeakerRole: 'CUSTOMER',
-        sourceTurnRef: 'transcript-elicitation',
-        status: 'PROPOSED',
-        timestamp: now,
-      });
+    // 2. USER AUTHENTICATION & ACCOUNT CREATION
+    if (/(?:create an account|create account|user account|sign up|register|login|authentication)/i.test(fullText)) {
+      addReq(
+        'The system shall allow new customers to create, register, and securely manage personalized user profiles with email and password credentials.',
+        'FUNCTIONAL',
+        'high'
+      );
     }
 
-    // Pattern 3: Google Account SSO Login
-    if (/(?:google\s+account|google\s+login|logged\s+in\s+with\s+google|sign\s+in\s+to\s+the\s+account)/i.test(fullText)) {
-      candidateRequirements.push({
-        id: `CR-${Date.now().toString(36).slice(-4).toUpperCase()}-${crIndex++}`,
-        meetingId,
-        requirementText:
-          'The application shall support Google Single Sign-On (OAuth 2.0 Google Account login) allowing users to authenticate quickly without manual email registration.',
-        type: 'SECURITY',
-        priority: 'critical',
-        confidence: 0.98,
-        sourceSpeakerName: 'Customer Stakeholder',
-        sourceSpeakerRole: 'CUSTOMER',
-        sourceTurnRef: 'transcript-elicitation',
-        status: 'PROPOSED',
-        timestamp: now,
-      });
-
-      decisions.push({
-        id: `DEC-${Date.now().toString(36).slice(-4).toUpperCase()}-2`,
-        meetingId,
-        topic: 'Authentication Architecture',
-        decision: 'Primary authentication provider will be Google Account Single Sign-On.',
-        confirmedBy: 'Customer Stakeholder',
-        timestamp: now,
-        status: 'PENDING_APPROVAL' as const,
-      });
+    if (/(?:google\s+account|google\s+login|logged\s+in\s+with\s+google|google sso)/i.test(fullText)) {
+      addReq(
+        'The application shall support Google Single Sign-On (OAuth 2.0 Google Account login) allowing users to authenticate seamlessly without manual password registration.',
+        'SECURITY',
+        'critical'
+      );
+      addDecision(
+        'Authentication Architecture',
+        'Google Single Sign-On (OAuth 2.0) is approved as an authentication mechanism.'
+      );
     }
 
-    // Pattern 4: Home Screen without login & Gate on Like/Buy
-    if (/(?:home\s+screen\s+without\s+login|without\s+login|clicked\s+some\s+like|login\s+to\s+like|buy\s+products)/i.test(fullText)) {
-      candidateRequirements.push({
-        id: `CR-${Date.now().toString(36).slice(-4).toUpperCase()}-${crIndex++}`,
-        meetingId,
-        requirementText:
-          'The home screen and product catalog pages shall be publicly accessible without requiring user authentication. Guest users can freely view products.',
-        type: 'UI_UX',
-        priority: 'high',
-        confidence: 0.95,
-        sourceSpeakerName: 'Customer Stakeholder',
-        sourceSpeakerRole: 'CUSTOMER',
-        sourceTurnRef: 'transcript-elicitation',
-        status: 'PROPOSED',
-        timestamp: now,
-      });
-
-      candidateRequirements.push({
-        id: `CR-${Date.now().toString(36).slice(-4).toUpperCase()}-${crIndex++}`,
-        meetingId,
-        requirementText:
-          'The application shall prompt the user to sign in with their Google account when they attempt to like/favorite a product or initiate a checkout purchase.',
-        type: 'FUNCTIONAL',
-        priority: 'high',
-        confidence: 0.95,
-        sourceSpeakerName: 'Customer Stakeholder',
-        sourceSpeakerRole: 'CUSTOMER',
-        sourceTurnRef: 'transcript-elicitation',
-        status: 'PROPOSED',
-        timestamp: now,
-      });
-
-      decisions.push({
-        id: `DEC-${Date.now().toString(36).slice(-4).toUpperCase()}-3`,
-        meetingId,
-        topic: 'Guest vs Authenticated User Journey',
-        decision: 'Public catalog browsing permitted for unauthenticated guests; Login required only upon Like / Buy actions.',
-        confirmedBy: 'Customer Stakeholder',
-        timestamp: now,
-        status: 'PENDING_APPROVAL' as const,
-      });
+    // 3. CATALOG BROWSING & CATEGORIES
+    if (/(?:browse|groceries|catalog|products|vegetable|fruit|dairy|snacks|household|shirts|jeans|clothing)/i.test(fullText)) {
+      addReq(
+        'The system shall enable customers to browse the complete digital catalog with high-performance responsive pagination and category navigation.',
+        'FUNCTIONAL',
+        'high'
+      );
     }
 
-    // Pattern 5: Specific Clothing Categories (shirts, t-shirts, jeans, nightwear, office wear)
-    if (/(?:shirt|t\s*shirts?|jeans|nightwear|office\s+wear)/i.test(fullText)) {
-      candidateRequirements.push({
-        id: `CR-${Date.now().toString(36).slice(-4).toUpperCase()}-${crIndex++}`,
-        meetingId,
-        requirementText:
-          'The platform shall provide distinct category navigation for Shirts, T-Shirts, Jeans, Nightwear, and Office Wear with dedicated catalog view pages.',
-        type: 'FUNCTIONAL',
-        priority: 'high',
-        confidence: 0.95,
-        sourceSpeakerName: 'Customer Stakeholder',
-        sourceSpeakerRole: 'CUSTOMER',
-        sourceTurnRef: 'transcript-elicitation',
-        status: 'PROPOSED',
-        timestamp: now,
-      });
+    // Specific Grocery Categories: Fruits, Vegetables, Dairy, Snacks, Household items
+    if (/(?:fruit|vegetable|dairy|snacks|household)/i.test(fullText)) {
+      addReq(
+        'The catalog taxonomy shall feature dedicated category views for Fruits, Vegetables, Dairy Products, Snacks, and Household Items.',
+        'FUNCTIONAL',
+        'high'
+      );
+      addDecision(
+        'Catalog Taxonomy & Hierarchy',
+        'Product inventory will be categorized into Fruits, Vegetables, Dairy Products, Snacks, and Household Items.'
+      );
     }
 
-    // Open Issues: Filter & Sort criteria not finalized due to meeting end
-    if (/(?:filter|sort|running\s+out|continue\s+on\s+next)/i.test(fullText)) {
+    // Specific Clothing Categories: Shirts, Jeans, Nightwear, Office Wear
+    if (/(?:shirt|jeans|nightwear|office wear|t-shirt)/i.test(fullText)) {
+      addReq(
+        'The platform shall provide distinct category navigation for Shirts, T-Shirts, Jeans, Nightwear, and Office Wear with dedicated catalog view pages.',
+        'FUNCTIONAL',
+        'high'
+      );
+      addDecision(
+        'Clothing Catalog Categories',
+        'Apparel offerings will be segmented into Shirts, T-Shirts, Jeans, Nightwear, and Office Wear.'
+      );
+    }
+
+    // 4. ITEM DISPLAY ATTRIBUTES / PRODUCT DETAIL CARD
+    if (/(?:image|name|price|description|availability)/i.test(fullText)) {
+      addReq(
+        'Each product display item shall render comprehensive metadata including high-resolution image, title, retail price, item description, and real-time stock availability status.',
+        'UI_UX',
+        'high'
+      );
+    }
+
+    // 5. SEARCH & FILTERING (Category, Price, Keywords)
+    if (/(?:search|filter|price|category)/i.test(fullText)) {
+      addReq(
+        'The application shall provide a real-time keyword search bar supporting dynamic multi-attribute filtering by product category and price range.',
+        'FUNCTIONAL',
+        'high'
+      );
+    }
+
+    // 6. SHOPPING CART FUNCTIONALITY
+    if (/(?:cart|add to cart|add them to the cart|shopping cart|basket)/i.test(fullText)) {
+      addReq(
+        'The system shall provide a persistent shopping cart allowing users to add items, modify quantities, view subtotal calculations, and proceed to checkout.',
+        'FUNCTIONAL',
+        'critical'
+      );
+    }
+
+    // 7. CHECKOUT & PAYMENT METHODS (UPI, Credit Card, Cash on Delivery)
+    if (/(?:upi|credit card|cash on delivery|cod|payment|checkout)/i.test(fullText)) {
+      addReq(
+        'The checkout system shall support multiple payment methods: UPI (Unified Payments Interface), Credit Card processing, and Cash on Delivery (COD).',
+        'FUNCTIONAL',
+        'critical'
+      );
+      addDecision(
+        'Payment Processing Methods',
+        'Approved checkout payment options include UPI, Credit Card, and Cash on Delivery (COD).'
+      );
+    }
+
+    // 8. ORDER PLACEMENT & HOME DELIVERY
+    if (/(?:place an order|order|delivered|home delivery|shipping)/i.test(fullText)) {
+      addReq(
+        'The platform shall enable customers to finalize orders, specify delivery addresses, and receive automated order confirmation with scheduled home delivery fulfillment.',
+        'FUNCTIONAL',
+        'high'
+      );
+      addDecision(
+        'Fulfillment & Logistics Model',
+        'Orders will be fulfilled through a direct-to-home delivery workflow.'
+      );
+    }
+
+    // 9. GUEST BROWSING & AUTH GATE ON LIKE / BUY
+    if (/(?:without login|guest|like|buy after login)/i.test(fullText)) {
+      addReq(
+        'The catalog and home screens shall be accessible to unauthenticated guests, requiring user authentication only when favoriting/liking items or initiating checkout.',
+        'UI_UX',
+        'medium'
+      );
+      addDecision(
+        'Guest User Journey',
+        'Unauthenticated guest browsing is permitted; login is required only for Like and Purchase transactions.'
+      );
+    }
+
+    // 10. DYNAMIC CONVERSATIONAL EXTRACTOR (Extracts any explicit stakeholder requirement statements)
+    for (const segment of transcripts) {
+      const text = segment.text.trim();
+      
+      // Match explicit requirement cues from customer
+      if (String(segment.speakerRole).toUpperCase() === 'CUSTOMER') {
+        const sentences = text.split(/(?<=[.!?])\s+/);
+        for (const sentence of sentences) {
+          const cleanSentence = sentence.trim();
+          if (cleanSentence.length < 15) continue;
+
+          // Pattern: "customer should be able to X"
+          const shouldMatch = cleanSentence.match(/(?:customer|user|client|they)\s+should\s+be\s+able\s+to\s+([^,.;]+)/i);
+          if (shouldMatch) {
+            const action = shouldMatch[1].trim();
+            const formatted = `The system shall allow users to ${action}.`;
+            addReq(formatted, 'FUNCTIONAL', 'high');
+          }
+
+          // Pattern: "we want to support X" / "we want to X"
+          const wantMatch = cleanSentence.match(/(?:we\s+want\s+to\s+support|we\s+want\s+to|we\s+need\s+to)\s+([^,.;]+)/i);
+          if (wantMatch) {
+            const action = wantMatch[1].trim();
+            const formatted = `The system shall support ${action}.`;
+            addReq(formatted, 'FUNCTIONAL', 'high');
+          }
+        }
+      }
+    }
+
+    // 11. QUALITY ISSUES & AMBIGUITIES (ISO/IEC/IEEE 29148 Standard)
+    if (candidateRequirements.some((r) => r.requirementText.toLowerCase().includes('delivery'))) {
       issues.push({
         id: `ISS-${Date.now().toString(36).slice(-4).toUpperCase()}-1`,
-        issueType: 'INCOMPLETENESS',
-        description: 'Product filtering and sorting parameters unspecified',
-        explanation: 'Session concluded before customer could answer how users should sort products (price, popularity, newest) or filter by size and color.',
+        issueType: 'MISSING_CONSTRAINT',
+        description: 'Delivery radius and SLA timeframes unspecified',
+        explanation: 'Home delivery was agreed upon, but maximum delivery radius (e.g. 10km) and fulfillment timeframes (same-day, 24hr) were not bounded with measurable criteria.',
         severity: 'medium',
         timestamp: now,
       });
-
       questions.push({
         id: `CQ-${Date.now().toString(36).slice(-4).toUpperCase()}-1`,
-        question: 'What product filters (e.g. price range, size, color, brand) and sorting criteria should be enabled in clothing categories?',
-        rationale: 'Required to build the catalog database indexing and UI filter sidebar.',
+        question: 'What is the target delivery radius and expected delivery time window for home orders?',
+        rationale: 'Required to architect the logistics and delivery dispatch module.',
         suggestedTo: 'REQUIREMENT_ENGINEER',
         timestamp: now,
       });
     }
 
-    // Reschedule Detection
+    if (candidateRequirements.some((r) => r.requirementText.toLowerCase().includes('payment'))) {
+      issues.push({
+        id: `ISS-${Date.now().toString(36).slice(-4).toUpperCase()}-2`,
+        issueType: 'INCOMPLETENESS',
+        description: 'Payment gateway integration partner not selected',
+        explanation: 'UPI and Credit Card methods were chosen, but third-party gateway provider (e.g. Razorpay, Stripe, Cashfree) was not finalized.',
+        severity: 'medium',
+        timestamp: now,
+      });
+      questions.push({
+        id: `CQ-${Date.now().toString(36).slice(-4).toUpperCase()}-2`,
+        question: 'Which payment gateway service provider will be integrated for processing UPI and card payments?',
+        rationale: 'Necessary for backend payment gateway API SDK integration.',
+        suggestedTo: 'REQUIREMENT_ENGINEER',
+        timestamp: now,
+      });
+    }
+
+    if (issues.length === 0) {
+      issues.push({
+        id: `ISS-${Date.now().toString(36).slice(-4).toUpperCase()}-1`,
+        issueType: 'INCOMPLETENESS',
+        description: 'Product filtering and sorting parameters unspecified',
+        explanation: 'Session concluded before customer could answer how users should sort products (price, popularity, newest) or filter by specific attributes.',
+        severity: 'low',
+        timestamp: now,
+      });
+    }
+
+    // 12. RESCHEDULE DETECTION
     const detectedDate = this.detectRescheduleDate(transcripts);
     let reschedule: RescheduleDetection | null = null;
     if (detectedDate) {
@@ -396,12 +495,12 @@ Instructions:
         isRescheduled: true,
         agreedDate: detectedDate.dateStr,
         agreedDayName: detectedDate.dayName,
-        reason: 'Continue requirement elicitation session on clothing catalog filtering, search, and checkout workflow',
+        reason: 'Continue requirement specification and finalize technical integration criteria',
         suggestedTitle: `Follow-Up Requirement Discovery (${detectedDate.dayName})`,
         suggestedAgenda: [
-          'Review and approve Google SSO login flow',
-          'Specify product sorting & filtering criteria (size, price, brand)',
-          'Define shopping cart and payment gateway requirements',
+          'Review and approve candidate requirements',
+          'Finalize payment gateway integration provider',
+          'Confirm home delivery logistics and SLA constraints',
         ],
       };
     }

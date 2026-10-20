@@ -9,45 +9,82 @@ export class FileTranscriptStore implements ITranscriptStore {
     return path.join(getProjectsDir(), projectId, 'meetings');
   }
 
-  private getTranscriptFilePath(projectId: string, meetingId: string): string {
-    const filename = meetingId.startsWith('meeting-')
-      ? `${meetingId}-transcript.json`
-      : `meeting-${meetingId}-transcript.json`;
-    return path.join(this.getMeetingDirPath(projectId), filename);
+  private getTranscriptCandidates(projectId: string, meetingId: string): string[] {
+    const cleanId = meetingId.replace(/^meeting-/, '');
+    const dir = this.getMeetingDirPath(projectId);
+    return [
+      path.join(dir, `meeting-${cleanId}-transcript.json`),
+      path.join(dir, `${cleanId}-transcript.json`),
+      path.join(dir, `${meetingId}-transcript.json`),
+    ];
   }
 
   async getTranscript(meetingId: string, projectId: string = 'project-001'): Promise<MeetingTranscriptData | null> {
-    const specificPath = this.getTranscriptFilePath(projectId, meetingId);
-    try {
-      const content = await fs.readFile(/*turbopackIgnore: true*/ specificPath, 'utf-8');
-      return JSON.parse(content) as MeetingTranscriptData;
-    } catch {
-      // Fallback search across all projects if needed
+    const candidates = this.getTranscriptCandidates(projectId, meetingId);
+    for (const p of candidates) {
       try {
-        const projectsDir = getProjectsDir();
-        await fs.mkdir(projectsDir, { recursive: true });
-        const projects = await fs.readdir(projectsDir);
-        for (const proj of projects) {
-          const candidatePath = path.join(projectsDir, proj, 'meetings', `meeting-${meetingId}-transcript.json`);
+        const content = await fs.readFile(/*turbopackIgnore: true*/ p, 'utf-8');
+        const parsed = JSON.parse(content);
+        if (parsed) {
+          if (Array.isArray(parsed)) {
+            return {
+              meetingId,
+              projectId,
+              segments: parsed,
+              lastUpdated: new Date().toISOString(),
+            };
+          }
+          return parsed as MeetingTranscriptData;
+        }
+      } catch {
+        // try next candidate
+      }
+    }
+
+    // Fallback search across all projects if needed
+    try {
+      const cleanId = meetingId.replace(/^meeting-/, '');
+      const projectsDir = getProjectsDir();
+      await fs.mkdir(projectsDir, { recursive: true });
+      const projects = await fs.readdir(projectsDir);
+      for (const proj of projects) {
+        const projCandidates = [
+          path.join(projectsDir, proj, 'meetings', `meeting-${cleanId}-transcript.json`),
+          path.join(projectsDir, proj, 'meetings', `${cleanId}-transcript.json`),
+          path.join(projectsDir, proj, 'meetings', `${meetingId}-transcript.json`),
+        ];
+        for (const candidatePath of projCandidates) {
           try {
             const content = await fs.readFile(/*turbopackIgnore: true*/ candidatePath, 'utf-8');
-            return JSON.parse(content) as MeetingTranscriptData;
+            const parsed = JSON.parse(content);
+            if (parsed) {
+              if (Array.isArray(parsed)) {
+                return {
+                  meetingId,
+                  projectId: proj,
+                  segments: parsed,
+                  lastUpdated: new Date().toISOString(),
+                };
+              }
+              return parsed as MeetingTranscriptData;
+            }
           } catch {
             continue;
           }
         }
-      } catch {
-        // Fall through
       }
-      return null;
+    } catch {
+      // Fall through
     }
+    return null;
   }
 
   async saveTranscript(data: MeetingTranscriptData): Promise<void> {
     const projectId = data.projectId || 'project-001';
+    const cleanId = data.meetingId.replace(/^meeting-/, '');
     const dir = this.getMeetingDirPath(projectId);
     await fs.mkdir(dir, { recursive: true });
-    const filePath = this.getTranscriptFilePath(projectId, data.meetingId);
+    const filePath = path.join(dir, `meeting-${cleanId}-transcript.json`);
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
   }
 

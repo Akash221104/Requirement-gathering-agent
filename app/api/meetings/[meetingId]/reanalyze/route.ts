@@ -3,6 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { meetingDocumentService } from '@/features/requirements/services/meeting-document-service';
 import { requirementIntelligenceEngine } from '@/features/requirements/services/requirement-intelligence';
+import { meetingStore } from '@/lib/storage/meeting-store';
 import { getProjectsDir } from '@/lib/storage/data-dir';
 
 /**
@@ -17,7 +18,11 @@ export async function POST(
 ) {
   try {
     const { meetingId } = await params;
-    const projectId = req.nextUrl.searchParams.get('projectId') || 'project-001';
+    const requestedProjectId = req.nextUrl.searchParams.get('projectId') || 'project-001';
+
+    // Resolve true projectId from meeting record if possible
+    const meeting = await meetingStore.getMeeting(meetingId, requestedProjectId);
+    const projectId = meeting?.projectId || requestedProjectId;
 
     console.log(`[Reanalyze] Starting forced re-analysis for meeting ${meetingId} in project ${projectId}`);
 
@@ -30,15 +35,23 @@ export async function POST(
     // Read the intelligence file to get exact count of extracted requirements
     let reqCount = 0;
     let freshState: any = null;
-    try {
-      const cleanId = meetingId.replace(/^meeting-/, '');
-      const intelPath = path.join(
-        getProjectsDir(), projectId, 'meetings',
-        `meeting-${cleanId}-intelligence.json`
-      );
-      freshState = JSON.parse(await fs.readFile(/*turbopackIgnore: true*/ intelPath, 'utf-8'));
-      reqCount = (freshState.candidateRequirements || []).length;
-    } catch {}
+    const cleanId = meetingId.replace(/^meeting-/, '');
+    const intelCandidates = [
+      path.join(getProjectsDir(), projectId, 'meetings', `meeting-${cleanId}-intelligence.json`),
+      path.join(getProjectsDir(), projectId, 'meetings', `${cleanId}-intelligence.json`),
+      path.join(getProjectsDir(), projectId, 'meetings', `${meetingId}-intelligence.json`),
+    ];
+
+    for (const intelPath of intelCandidates) {
+      try {
+        const raw = await fs.readFile(/*turbopackIgnore: true*/ intelPath, 'utf-8');
+        freshState = JSON.parse(raw);
+        if (freshState && Array.isArray(freshState.candidateRequirements)) {
+          reqCount = freshState.candidateRequirements.length;
+          break;
+        }
+      } catch {}
+    }
 
     // Invalidate the in-memory activeStates cache so next GET /intelligence reads fresh data
     if (freshState) {

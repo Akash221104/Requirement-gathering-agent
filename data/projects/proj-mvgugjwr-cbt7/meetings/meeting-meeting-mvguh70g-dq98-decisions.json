@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "id": "DEC-T8XB-1",
+    "meetingId": "meeting-mvguh70g-dq98",
+    "topic": "Product Scope & Business Model",
+    "decision": "The application is defined as an e-commerce platform named 'QuickCart' designed for online consumer shopping.",
+    "confirmedBy": "Customer Stakeholder",
+    "timestamp": "2026-10-20T18:32:32.110Z",
+    "status": "PENDING_APPROVAL"
+  },
+  {
+    "id": "DEC-T8XB-2",
+    "meetingId": "meeting-mvguh70g-dq98",
+    "topic": "Authentication Architecture",
+    "decision": "Google Single Sign-On (OAuth 2.0) is approved as an authentication mechanism.",
+    "confirmedBy": "Customer Stakeholder",
+    "timestamp": "2026-10-20T18:32:32.110Z",
+    "status": "PENDING_APPROVAL"
+  },
+  {
+    "id": "DEC-T8XC-3",
+    "meetingId": "meeting-mvguh70g-dq98",
+    "topic": "Catalog Taxonomy & Hierarchy",
+    "decision": "Product inventory will be categorized into Fruits, Vegetables, Dairy Products, Snacks, and Household Items.",
+    "confirmedBy": "Customer Stakeholder",
+    "timestamp": "2026-10-20T18:32:32.110Z",
+    "status": "PENDING_APPROVAL"
+  },
+  {
+    "id": "DEC-T8XC-4",
+    "meetingId": "meeting-mvguh70g-dq98",
+    "topic": "Payment Processing Methods",
+    "decision": "Approved checkout payment options include UPI, Credit Card, and Cash on Delivery (COD).",
+    "confirmedBy": "Customer Stakeholder",
+    "timestamp": "2026-10-20T18:32:32.110Z",
+    "status": "PENDING_APPROVAL"
+  },
+  {
+    "id": "DEC-T8XC-5",
+    "meetingId": "meeting-mvguh70g-dq98",
+    "topic": "Fulfillment & Logistics Model",
+    "decision": "Orders will be fulfilled through a direct-to-home delivery workflow.",
+    "confirmedBy": "Customer Stakeholder",
+    "timestamp": "2026-10-20T18:32:32.110Z",
+    "status": "PENDING_APPROVAL"
+  },
+  {
+    "id": "DEC-T8XC-6",
+    "meetingId": "meeting-mvguh70g-dq98",
+    "topic": "Guest User Journey",
+    "decision": "Unauthenticated guest browsing is permitted; login is required only for Like and Purchase transactions.",
+    "confirmedBy": "Customer Stakeholder",
+    "timestamp": "2026-10-20T18:32:32.110Z",
+    "status": "PENDING_APPROVAL"
+  }
+]

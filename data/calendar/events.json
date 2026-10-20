@@ -22,25 +22,25 @@
     "updatedAt": "2026-10-20T15:16:30.458Z"
   },
   {
-    "meetingId": "meeting-followup-mvguq4c8",
+    "meetingId": "meeting-followup-mvh0t8z4",
     "linkedMeetingId": "meeting-mvguh70g-dq98",
     "projectId": "proj-mvgugjwr-cbt7",
     "title": "Follow-Up Requirement Discovery (Next Sunday)",
-    "description": "Continue requirement elicitation session on clothing catalog filtering, search, and checkout workflow",
+    "description": "Continue requirement specification and finalize technical integration criteria",
     "date": "2026-10-25",
     "startTime": "10:00",
     "endTime": "10:45",
     "timezone": "UTC",
     "meetingMode": "autonomous",
     "agenda": [
-      "Review and approve Google SSO login flow",
-      "Specify product sorting & filtering criteria (size, price, brand)",
-      "Define shopping cart and payment gateway requirements"
+      "Review and approve candidate requirements",
+      "Finalize payment gateway integration provider",
+      "Confirm home delivery logistics and SLA constraints"
     ],
     "participants": [],
     "status": "SCHEDULED",
     "id": "cal-mvgukmpk-0ilj",
     "createdAt": "2026-10-20T15:37:52.376Z",
-    "updatedAt": "2026-10-20T15:42:08.511Z"
+    "updatedAt": "2026-10-20T18:32:32.178Z"
   }
 ]

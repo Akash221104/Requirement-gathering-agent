@@ -62,26 +62,35 @@ export class MeetingDocumentService {
     forceReanalyze: boolean = false
   ): Promise<MeetingDocumentBundle> {
     const meeting = await meetingStore.getMeeting(meetingId, projectId);
+    const resolvedProjectId = meeting?.projectId || projectId || 'project-001';
     const meetingTitle = meeting?.title || 'Requirement Elicitation Meeting';
 
     // 1. Gather transcript segments (from live memory or transcriptStore)
-    let segments: TranscriptSegment[] = conversationManager.getSegments(meetingId, projectId);
+    let segments: TranscriptSegment[] = conversationManager.getSegments(meetingId, resolvedProjectId);
     const cleanId = meetingId.replace(/^meeting-/, '');
     if (!segments || segments.length === 0) {
       try {
-        const persisted = await transcriptStore.getTranscript(meetingId, projectId);
+        const persisted = await transcriptStore.getTranscript(meetingId, resolvedProjectId);
         if (persisted && Array.isArray(persisted.segments) && persisted.segments.length > 0) {
           segments = persisted.segments;
         } else {
-          const transcriptPath = path.join(
-            getProjectsDir(),
-            projectId,
-            'meetings',
-            `meeting-${cleanId}-transcript.json`
-          );
-          const data = await fs.readFile(/*turbopackIgnore: true*/ transcriptPath, 'utf-8');
-          const parsed = JSON.parse(data);
-          segments = Array.isArray(parsed) ? parsed : (parsed.segments || []);
+          // Check candidate files across known paths
+          const candidatePaths = [
+            path.join(getProjectsDir(), resolvedProjectId, 'meetings', `meeting-${cleanId}-transcript.json`),
+            path.join(getProjectsDir(), resolvedProjectId, 'meetings', `${cleanId}-transcript.json`),
+            path.join(getProjectsDir(), resolvedProjectId, 'meetings', `${meetingId}-transcript.json`),
+          ];
+          for (const tp of candidatePaths) {
+            try {
+              const data = await fs.readFile(/*turbopackIgnore: true*/ tp, 'utf-8');
+              const parsed = JSON.parse(data);
+              const found = Array.isArray(parsed) ? parsed : (parsed.segments || []);
+              if (found.length > 0) {
+                segments = found;
+                break;
+              }
+            } catch {}
+          }
         }
       } catch {
         segments = [];
@@ -94,7 +103,7 @@ export class MeetingDocumentService {
 
     const intelPath = path.join(
       getProjectsDir(),
-      projectId,
+      resolvedProjectId,
       'meetings',
       `meeting-${cleanId}-intelligence.json`
     );
@@ -117,7 +126,7 @@ export class MeetingDocumentService {
           issues = [];
         }
 
-        const synthesis = await transcriptSynthesizer.synthesize(meetingId, projectId, segments);
+        const synthesis = await transcriptSynthesizer.synthesize(meetingId, resolvedProjectId, segments);
 
         // Merge synthesized requirements with existing ones (manual ones take precedence)
         const existingTexts = new Set(candidateRequirements.map((r) => r.requirementText.toLowerCase().trim()));
@@ -130,7 +139,7 @@ export class MeetingDocumentService {
 
         // Save decisions if found
         if (synthesis.decisions.length > 0) {
-          await decisionStore.saveDecisions(meetingId, synthesis.decisions, projectId);
+          await decisionStore.saveDecisions(meetingId, synthesis.decisions, resolvedProjectId);
         }
 
         if (synthesis.issues.length > 0 && (forceReanalyze || issues.length === 0)) {
@@ -142,7 +151,7 @@ export class MeetingDocumentService {
         // Persist updated candidate requirements to disk
         const updatedIntel = {
           meetingId,
-          projectId,
+          projectId: resolvedProjectId,
           candidateRequirements,
           issues,
           clarificationQuestions: synthesis.questions || [],
@@ -157,13 +166,13 @@ export class MeetingDocumentService {
     }
 
     // 4. Gather decisions and changes
-    const confirmedDecisions = await decisionStore.getDecisions(meetingId, projectId);
-    const detectedChanges = await decisionStore.getChanges(meetingId, projectId);
+    const confirmedDecisions = await decisionStore.getDecisions(meetingId, resolvedProjectId);
+    const detectedChanges = await decisionStore.getChanges(meetingId, resolvedProjectId);
 
     // 5. Generate post-meeting documentation bundle and follow-up
     const result = await postMeetingDocumentationEngine.generateDocuments({
       meetingId,
-      projectId,
+      projectId: resolvedProjectId,
       meetingTitle,
       transcriptSegments: segments,
       candidateRequirements,

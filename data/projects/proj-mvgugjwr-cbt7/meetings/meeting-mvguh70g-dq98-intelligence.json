@@ -1,25 +1,249 @@
 {
   "meetingId": "meeting-mvguh70g-dq98",
   "projectId": "proj-mvgugjwr-cbt7",
-  "candidateRequirements": [],
+  "candidateRequirements": [
+    {
+      "id": "CR-T8XB-1",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall provide a responsive e-commerce web and mobile application ('QuickCart') supporting online product discovery, cart checkout, and digital order processing.",
+      "type": "BUSINESS",
+      "priority": "critical",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XB-2",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall allow new customers to create, register, and securely manage personalized user profiles with email and password credentials.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XB-3",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The application shall support Google Single Sign-On (OAuth 2.0 Google Account login) allowing users to authenticate seamlessly without manual password registration.",
+      "type": "SECURITY",
+      "priority": "critical",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XB-4",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall enable customers to browse the complete digital catalog with high-performance responsive pagination and category navigation.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-5",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The catalog taxonomy shall feature dedicated category views for Fruits, Vegetables, Dairy Products, Snacks, and Household Items.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-6",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "Each product display item shall render comprehensive metadata including high-resolution image, title, retail price, item description, and real-time stock availability status.",
+      "type": "UI_UX",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-7",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The application shall provide a real-time keyword search bar supporting dynamic multi-attribute filtering by product category and price range.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-8",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall provide a persistent shopping cart allowing users to add items, modify quantities, view subtotal calculations, and proceed to checkout.",
+      "type": "FUNCTIONAL",
+      "priority": "critical",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-9",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The checkout system shall support multiple payment methods: UPI (Unified Payments Interface), Credit Card processing, and Cash on Delivery (COD).",
+      "type": "FUNCTIONAL",
+      "priority": "critical",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-10",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The platform shall enable customers to finalize orders, specify delivery addresses, and receive automated order confirmation with scheduled home delivery fulfillment.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-11",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The catalog and home screens shall be accessible to unauthenticated guests, requiring user authentication only when favoriting/liking items or initiating checkout.",
+      "type": "UI_UX",
+      "priority": "medium",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-12",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall allow users to create an account.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-13",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall allow users to place an order and get it delivered to their home.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-14",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall support search for the product.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-15",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall allow users to filter them by category and price.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CR-T8XC-16",
+      "meetingId": "meeting-mvguh70g-dq98",
+      "requirementText": "The system shall support UPI credit card and cash on delivery feature.",
+      "type": "FUNCTIONAL",
+      "priority": "high",
+      "confidence": 0.95,
+      "sourceSpeakerName": "Customer Stakeholder",
+      "sourceSpeakerRole": "CUSTOMER",
+      "sourceTurnRef": "transcript-elicitation",
+      "status": "PROPOSED",
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    }
+  ],
   "issues": [
     {
-      "id": "ISS-Q4AI-1",
-      "issueType": "INCOMPLETENESS",
-      "description": "Product filtering and sorting parameters unspecified",
-      "explanation": "Session concluded before customer could answer how users should sort products (price, popularity, newest) or filter by size and color.",
+      "id": "ISS-T8XC-1",
+      "issueType": "MISSING_CONSTRAINT",
+      "description": "Delivery radius and SLA timeframes unspecified",
+      "explanation": "Home delivery was agreed upon, but maximum delivery radius (e.g. 10km) and fulfillment timeframes (same-day, 24hr) were not bounded with measurable criteria.",
       "severity": "medium",
-      "timestamp": "2026-10-20T15:42:08.440Z"
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "ISS-T8XC-2",
+      "issueType": "INCOMPLETENESS",
+      "description": "Payment gateway integration partner not selected",
+      "explanation": "UPI and Credit Card methods were chosen, but third-party gateway provider (e.g. Razorpay, Stripe, Cashfree) was not finalized.",
+      "severity": "medium",
+      "timestamp": "2026-10-20T18:32:32.110Z"
     }
   ],
   "clarificationQuestions": [
     {
-      "id": "CQ-Q4AI-1",
-      "question": "What product filters (e.g. price range, size, color, brand) and sorting criteria should be enabled in clothing categories?",
-      "rationale": "Required to build the catalog database indexing and UI filter sidebar.",
+      "id": "CQ-T8XC-1",
+      "question": "What is the target delivery radius and expected delivery time window for home orders?",
+      "rationale": "Required to architect the logistics and delivery dispatch module.",
       "suggestedTo": "REQUIREMENT_ENGINEER",
-      "timestamp": "2026-10-20T15:42:08.440Z"
+      "timestamp": "2026-10-20T18:32:32.110Z"
+    },
+    {
+      "id": "CQ-T8XC-2",
+      "question": "Which payment gateway service provider will be integrated for processing UPI and card payments?",
+      "rationale": "Necessary for backend payment gateway API SDK integration.",
+      "suggestedTo": "REQUIREMENT_ENGINEER",
+      "timestamp": "2026-10-20T18:32:32.110Z"
     }
   ],
-  "lastUpdated": "2026-10-20T15:42:08.442Z"
+  "lastUpdated": "2026-10-20T18:32:32.114Z"
 }

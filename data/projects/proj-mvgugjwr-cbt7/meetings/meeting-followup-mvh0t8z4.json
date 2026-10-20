@@ -1,0 +1,26 @@
+{
+  "id": "meeting-followup-mvh0t8z4",
+  "title": "Follow-Up Requirement Discovery (Next Sunday)",
+  "mode": "autonomous",
+  "status": "scheduled",
+  "projectId": "proj-mvgugjwr-cbt7",
+  "createdAt": "2026-10-20T18:32:32.181Z",
+  "participants": [],
+  "agenda": [
+    {
+      "id": "agenda-1",
+      "topic": "Review and approve candidate requirements",
+      "completed": false
+    },
+    {
+      "id": "agenda-2",
+      "topic": "Finalize payment gateway integration provider",
+      "completed": false
+    },
+    {
+      "id": "agenda-3",
+      "topic": "Confirm home delivery logistics and SLA constraints",
+      "completed": false
+    }
+  ]
+}
